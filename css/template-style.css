@@ -264,6 +264,6 @@ form.customform input, form.customform select, form.customform textarea {
 #aboutus, #game, #services{
 	display: block;
     position: relative;
-    top: -150px;
+    top: -130px;
     visibility: hidden;	
 }
