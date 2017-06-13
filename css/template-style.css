@@ -261,7 +261,7 @@ form.customform input, form.customform select, form.customform textarea {
 	margin-top: .50rem;
 }
 
-#aboutus, #game, #services{
+#aboutus, #game, #services, #carouselanchor{
 	display: block;
     position: relative;
     top: -130px;
