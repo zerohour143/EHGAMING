@@ -271,3 +271,15 @@ form.customform input, form.customform select, form.customform textarea {
     top: -130px;
     visibility: hidden;	
 }
+
+
+#gpic:hover
+{
+	transform: scale(1.25);
+	transition: transform .25s ease;
+}
+
+#gpic:hover a p{
+	color: rgb(0, 120, 191);
+}
+
