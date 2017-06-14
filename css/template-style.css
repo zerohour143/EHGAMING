@@ -276,7 +276,7 @@ form.customform input, form.customform select, form.customform textarea {
 #gpic:hover
 {
 	transform: scale(1.25);
-	transition: transform .25s ease;
+	transition: transform .30s ease;
 }
 
 #gpic:hover a p{
