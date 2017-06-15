@@ -1,3 +1,11 @@
+*{
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
 .modal {
   display: inline-block; 
   padding: 0 1em;
@@ -45,7 +53,6 @@
   left: 0;
   position: fixed;
   right: 0;
-  text-align: center;
   top: 0;
   z-index: -800;
 }
@@ -98,7 +105,7 @@
 .modal__overlay {
   margin: auto;
   border: 0;
-  width: 85%;
+  width: 45%;
   height: 75%;
   opacity: 0;
   overflow: hidden;
@@ -110,6 +117,7 @@
 }
 
 input:checked ~ .modal__overlay {
+  text-align: center;
   border-radius: 1%;
   opacity: 1;
   -webkit-transform: scale(1);
@@ -127,5 +135,17 @@ input:focus + label {
 }
 
 #closemodal{
-  margin-right: 2rem;
+  float: right;
+}
+
+.mbox{
+  padding:5%;
+}
+
+#modal-header{
+  text-align: center;
+  padding: 3rem;
+  background: rgba(0, 120, 191, 0.75);
+  color: white;
+  font-weight: 5rem;
 }
