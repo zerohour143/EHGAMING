@@ -25,6 +25,7 @@
     <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
     <!-- Main stylesheet and color file-->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/modal.css" rel="stylesheet">
     <link id="color-scheme" href="css/default.css" rel="stylesheet">
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
@@ -51,7 +52,17 @@
             <div class="subscribe">
               <div class="row">
                 <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 input-group subscribe-box">
-                  <div id="subscription-response">asdasd</div>
+                  <div id="subscription-response">
+                      <div class="modal">
+                      <input id="customize" type="checkbox" name="modal" tabindex="1">
+                      <label for="customize" >Launch Modal</label>
+                      <div class="modal__overlay">
+                        <div class="modal__box">  
+                          <label id="closemodal" for="customize">&#10006;</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
