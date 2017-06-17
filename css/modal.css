@@ -44,7 +44,7 @@
 }
 
 .modal__overlay {
-  background:rgba(255, 255, 255, 0.90);
+  background:rgba(255, 255, 255, 0.97);
   bottom: 0;
   left: 0;
   position: fixed;
@@ -136,7 +136,7 @@ input:focus + label {
 }
 
 .mbox{
-  padding:5% 6%;
+  padding:0 6%;
   height: inherit;
   overflow-y: scroll; 
 }
@@ -151,9 +151,54 @@ input:focus + label {
 }
 
 #modal-content{
-  padding: 5rem;
+ padding: 2rem 0;
 }
 
+#requirements,
+#bonus{
+  font-size: 98%;
+  font-weight: bolder;
+  text-align: initial;
+}
+
+#requirements span,
+#bonus span{
+  padding: 5px;
+  width: 100%;
+}
+
+#requirements ol{
+  display: block;
+  margin-top: 1rem;
+}
+
+#requirements ol li{
+  color:rgba(226, 97, 97, 100);
+  
+}
+
+#rqs{
+  color:#a94442;
+}
+
+#bonus{
+  margin-top: 3rem;
+}
+
+#bonus ol{
+  display: block;
+  margin-top: 1rem;
+}
+
+#bns{
+  color:#3c763d;
+  
+}
+
+#bonus ol li{
+  color:rgb(74, 167, 86);
+  
+}
 
 
 
