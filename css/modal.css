@@ -101,8 +101,8 @@
 .modal__overlay {
   margin: auto;
   border: 0;
-  width: 65%;
-  height: 85%;
+  width: 90%;
+  height: 98%;
   opacity: 0;
   overflow: hidden;
   -webkit-transform: scale(0.5);
@@ -137,7 +137,7 @@ input:focus + label {
 
 .mbox{
   padding:0 6%;
-  height: inherit;
+  height: 80%;
   overflow-y: scroll; 
 }
 
@@ -155,14 +155,16 @@ input:focus + label {
 }
 
 #requirements,
-#bonus{
+#bonus,
+#offer{
   font-size: 98%;
   font-weight: bolder;
   text-align: initial;
 }
 
 #requirements span,
-#bonus span{
+#bonus span,
+#offer span{
   padding: 5px;
   width: 100%;
 }
@@ -182,7 +184,8 @@ input:focus + label {
 }
 
 #bonus{
-  margin-top: 3rem;
+  margin-top: 0rem;
+  margin-bottom: 2rem;
 }
 
 #bonus ol{
@@ -197,8 +200,27 @@ input:focus + label {
 
 #bonus ol li{
   color:rgb(74, 167, 86);
-  
 }
+
+#offer{
+  margin-top: 3rem;
+}
+
+#offer table{
+  margin-top: 2rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#offer table thead tr th,
+#offer table tbody tr th{
+  text-align: center;
+}
+
+#silverlast{
+  font-weight: bolder;
+}
+
 
 
 
