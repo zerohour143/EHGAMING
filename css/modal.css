@@ -44,7 +44,7 @@
 }
 
 .modal__overlay {
-  background:rgba(255, 255, 255, 0.92);
+  background:rgba(255, 255, 255, 1);
   bottom: 0;
   left: 0;
   position: fixed;
@@ -204,12 +204,14 @@ input:focus + label {
 
 #offer{
   margin-top: 3rem;
+  text-align: center;
 }
 
 #offer table{
   margin-top: 2rem;
   text-align: center;
-  vertical-align: middle;
+  width: 75%;
+  margin: 2rem auto;
 }
 
 #offer table thead tr th,
@@ -221,6 +223,22 @@ input:focus + label {
   font-weight: bolder;
 }
 
+#contribpts-cont{
+  
+}
+
+#contrib_bigbox{
+  height: 57% !important;
+  width: 65% !important;
+}
+
+#contribpts-cont{
+  padding: 1%;
+  margin-bottom: 5rem;
+}
+
+#contrib-cont{
+}
 
 
 
