@@ -44,7 +44,7 @@
 }
 
 .modal__overlay {
-  background:rgba(255, 255, 255, 1);
+  background:rgba(255, 255, 255, .96);
   bottom: 0;
   left: 0;
   position: fixed;
@@ -237,7 +237,48 @@ input:focus + label {
   margin-bottom: 5rem;
 }
 
-#contrib-cont{
+#contrib-cont table{
+  width:75%;
+  margin: auto;
+}
+#contrib-cont table tr th{
+   text-align: center;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: rgba(0, 120, 191, 0.61);
+  color: white;
+  font-weight: bolder;
+}
+
+#cstmize-bigbox{
+  width: 50% !important;
+  height: 65% !important;
+}
+
+#intro-cstmize{
+  margin-bottom: 1.5rem;
+}
+
+.skype{
+  padding: 0;
+  margin-bottom: -3rem;
+  background: #f0f4c3;
+  margin-top: 3rem;
+}
+
+.skype:hover{
+  background: #ffee58;
+}
+
+#mail{
+  background: #ffcdd2;
+  padding: 3.5rem 0;
+}
+
+#mail:hover{
+  background: #e57373;
+  color: white;
 }
 
 
