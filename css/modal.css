@@ -101,8 +101,8 @@
 .modal__overlay {
   margin: auto;
   border: 0;
-  width: 90%;
-  height: 98%;
+  width: 99%;
+  height: 99%;
   opacity: 0;
   overflow: hidden;
   -webkit-transform: scale(0.5);
@@ -113,7 +113,6 @@
 }
 
 input:checked ~ .modal__overlay {
-  padding-bottom: 4rem;
   text-align: center;
   border-radius: 1%;
   opacity: 1;
@@ -158,7 +157,6 @@ input:focus + label {
 #bonus,
 #offer{
   font-size: 98%;
-  font-weight: bolder;
   text-align: initial;
 }
 
@@ -281,5 +279,58 @@ input:focus + label {
   color: white;
 }
 
+#content1{
+  margin-bottom: 3rem;
+}
 
+#content1 span{
+  color: #a94442;
+  font-size: 1.5em;
+  font-weight: 120;
+}
+
+#content1 span strong{
+  color: #FFC107;
+}
+
+#table1 {
+  width: 75%;
+  margin: 0 auto;
+}
+
+#table2 {
+  width: 75%;
+  margin: 0 auto;
+}
+
+td, th{
+  text-align: center;
+}
+
+.bttn{
+  padding: 15px;
+  border-radius: 8px;
+  margin-right: 2rem;
+}
+
+#level{
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+#level2{
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+#word2{
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+}
+
+#word2 span{
+  font-size: 2em;
+  color:#3c763d;
+  font-weight: bold;
+}
 
