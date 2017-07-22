@@ -72,9 +72,9 @@
                           <thead>
                             <tr>
                               <th>Level Range</th>
-                              <th>Price</th>
+                              <th style="width:10rem">Price</th>
                               <th>Estimated Time</th>
-                              <th>Payment</th>
+                              <th style="width:20rem">Payment</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -131,17 +131,9 @@
                               <td style="vertical-align: middle;">Hit us up with a message</td>
                               <td style="vertical-align: middle;">Hit us up with a message</td>
                               <td style="vertical-align: middle;">
-                                  <script type="text/javascript" src="https://secure.skypeassets.com/i/scom/js/skype-uri.js"></script>
-                                  <div id="SkypeButton_Call_Bobyan143_1">
-                                   <script type="text/javascript">
-                                   Skype.ui({
-                                   "name": "chat",
-                                   "element": "SkypeButton_Call_Bobyan143_1",
-                                   "participants": ["Bobyan143"],
-                                   "imageSize": 32
-                                   });
-                                   </script>
-                                  </div>
+                              <a href="skype:bobyan1?chat"><div>
+                                <img src="img/skype.jpg" width="65%" height="40%" class="img-fluid">
+                              </div></a>
                               </td>
                             </tr>  
                           </tbody>
@@ -149,7 +141,7 @@
                       </div>
 
                       <div id="table2">
-                        <div id="word2"><span>If your level is between 15 and 56: </br>( Free Awakening )</span></div>
+                        <div id="word2"><span>If your level is between <strong>15 and 56: </strong></br>( Free Awakening )</span></div>
                         <div id="level2">
                           <a href="#content1" class="btn-success bttn">Special Package</a>
                           <a href="#table2" class="btn-info bttn">Normal Package</a>
@@ -344,19 +336,12 @@
                   </div>  
                     <div id="modal-content">
                      <div id="intro-cstmize"><span>For customized Request ( Send us a message ) via Skype or Email.</span></div>
-                      <script type="text/javascript" src="https://secure.skypeassets.com/i/scom/js/skype-uri.js"></script>
-                        <div class="skype" id="SkypeButton_Call_bobyan143_1">
-                         <script class="skypescript" type="text/javascript">
-                         Skype.ui({
-                         "name": "chat",
-                         "element": "SkypeButton_Call_bobyan143_1",
-                         "participants": ["bobyan143"],
-                         "imageSize": 32
-                         });
-                        </script>
-                        </div>
+                      <div class="skype">
+                        <script src="1.js"></script>
+                      </div>
                     </div>
-                    <div id="mail" class="container-fluid"><span><strong>Mail: </strong>Bobyan143@yahoo.com</span></div>
+                    <a href="mailto:axeltantay@gmail.com?Subject=Hello%20again">
+                    <div id="mail" class="container-fluid"><span><strong>Mail: </strong>Bobyan143@yahoo.com</span></div></a>
                 </div>
               </div>
 
@@ -374,4 +359,10 @@
     <script src="js/jquery.ajaxchimp.js"></script>
     <script src="js/main.js"></script> 
   </body>
+
+   <script type="text/javascript">
+      $(function(){
+        $("#includedContent").load("1.php"); 
+      });
+    </script> 
 </html>

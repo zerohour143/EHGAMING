@@ -303,6 +303,10 @@ input:focus + label {
   margin: 0 auto;
 }
 
+#table2 tr td:nth-child(4){
+  width:100px;
+}
+
 td, th{
   text-align: center;
 }
@@ -329,8 +333,12 @@ td, th{
 }
 
 #word2 span{
-  font-size: 2em;
+  font-size: 1.5em;
   color:#3c763d;
-  font-weight: bold;
+  font-weight: 120;
+}
+
+#word2 span strong{
+  color:#FFC107;
 }
 

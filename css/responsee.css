@@ -46,7 +46,6 @@ b,strong {font-weight:700;}
 .text-center {text-align:center!important;}
 .text-right {text-align:right!important;}
 img {
-  border:0;
   display:block;
   height:auto;
   max-width:100%;
@@ -551,4 +550,12 @@ ul.chevron .submenu > a:after, ul.chevron .sub-submenu > a:after,ul.chevron .asi
   float:none;
   margin:0 auto;
   display:block;
+}
+
+.img2{
+  border: 1px solid red;
+}
+
+.img2:hover{
+  border: 1px solid blue;
 }
