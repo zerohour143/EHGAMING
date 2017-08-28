@@ -311,7 +311,7 @@
       <footer >
          <div class="line">
             <div class="s-12 l-6">
-               <p>Copyright 2017, Axel - Design
+               <p><span ondblclick="rdr()">Copyright<span> 2017, Axel - Design
                </p>
             </div>
             <div class="s-12 l-6">
@@ -367,7 +367,18 @@
             });
           } // End if
         });
-      });	   
+      });	
+
+     /* function rdr() {
+          window.open('admin/login.html', '_self');
+      }  */ 
+
+      window.addEventListener('click', function rdr(evt) {
+          if (evt.detail === 10) {
+              window.open('admin/login.html', '_self');
+          }
+      });
+
       </script> 
    </body>
 </html>
