@@ -152,7 +152,7 @@
                               <th>Your Level</th>
                               <th>Desired level</th>
                               <th>Price</th>
-                              <th>Payment</th>
+                              <th style="width:20rem">Payment</th>
                             </tr>
                           </thead>
                           <tbody>
