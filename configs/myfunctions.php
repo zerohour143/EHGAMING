@@ -79,7 +79,7 @@
 			if(empty($row)){
 				echo 'Username or Password is Incorrect';
 			}else{
-				header('Location: https://www.google.com.ph/search?dcr=0&source=hp&q=PASSWORD+IS+CORRECT&oq=PASSWORD+IS+CORRECT&gs_l=psy-ab.3...10423.13718.0.13942.22.13.1.0.0.0.509.1879.2-1j3j0j1.5.0....0...1.1.64.psy-ab..16.6.1883.0..0.RPZEsQ9nnsI');
+				header('Location: ../admin/modules/dashboard.php');
 			}
 		}
 
