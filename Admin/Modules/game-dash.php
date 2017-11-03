@@ -87,16 +87,16 @@
             <div class="Games-list" id="g2">
                 <div class="addgame_input_container">
                     <div class="addgame_title"><span>ADD GAME</span></div>
-                <form>
+                <form method="POST" action="functions/add-game.php" enctype="multipart/form-data">
                     <div class="input-group input-group-lg addgame_input">
                       <span class="input-group-addon" id="sizing-addon1">Title: </span>
-                      <input required type="text" class="form-control" placeholder="input title of game here" aria-describedby="sizing-addon1">
+                      <input required type="text" name="title" class="form-control" placeholder="input title of game here" aria-describedby="sizing-addon1">
                     </div>
                     <div class="input-group input-group-lg addgame_input">
                       <span class="input-group-addon" id="sizing-addon1">Details: </span>
-                      <input required type="text" class="form-control" placeholder="input some details about the game" aria-describedby="sizing-addon1">
+                      <input required type="text" name="details" class="form-control" placeholder="input some details about the game" aria-describedby="sizing-addon1">
                     </div>
-                    <input required type="file" class="form-control-file gamefile" id="exampleInputFile">
+                    <input required type="file" name="file" class="form-control-file gamefile" id="myFile" accept=".png, .jpg, .jpeg">
                     <div class="btn-group-lg addgamebtn" align="center">
                         <input type="submit" class="btn btn-success">
                         <input type='reset' value='Reset' name='reset' class="btn btn-danger">  
@@ -136,6 +136,11 @@
 
         elem0.style.display='none';
         elem.style.display = "block";
+
+        function myFunction() {
+            var x = document.getElementById("myFile").value;
+            document.getElementById("demo").innerHTML = x;
+        }
       }
     </script> 
 </html>

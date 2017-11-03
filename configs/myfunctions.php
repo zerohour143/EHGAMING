@@ -65,6 +65,8 @@
 			return $conn->query($sql);
 		}
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 //LOGINNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
 
 		function login($uname,$password){
@@ -87,29 +89,37 @@
 		}
 
 		//GAMEEEE REAAAD DATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-	function dataselectgame(){
-			$conn = $this->connectdb($GLOBALS['host'],$GLOBALS['user'],$GLOBALS['pass'],$GLOBALS['database']);
-			$sql =  "SELECT title, picture, dateAdded FROM Games";
-			$result = $conn->query($sql);
+		function dataselectgame(){
+				$conn = $this->connectdb($GLOBALS['host'],$GLOBALS['user'],$GLOBALS['pass'],$GLOBALS['database']);
+				$sql =  "SELECT title, picture, dateAdded FROM Games";
+				$result = $conn->query($sql);
 
-			if ($result->num_rows > 0) {
-			    while($row = $result->fetch_assoc()) {
-				   echo '<div class="container-fluid game-item">
-	                    <div class="game-img">
-	                        <img src="'.$row["picture"].'" width="80" height="80">                      
-	                    </div>
-	                    <div class="game-title">
-	                        <span>'.$row["title"].'</span>
-	                    </div>
-	                    <div class="game-details">
-	                        <span >Date Added: '.$row["dateAdded"].'</span>
-	                    </div>
-	                </div>' ;    
-			    }
-			} else {
-			    echo "NO RESULT";
-			}
-	}
+				if ($result->num_rows > 0) {
+				    while($row = $result->fetch_assoc()) {
+					   echo '<div class="container-fluid game-item">
+		                    <div class="game-img">
+		                        <img src="'.$row["picture"].'" width="80" height="80">                      
+		                    </div>
+		                    <div class="game-title">
+		                        <span>'.$row["title"].'</span>
+		                    </div>
+		                    <div class="game-details">
+		                        <span >Date Added: '.$row["dateAdded"].'</span>
+		                    </div>
+		                </div>' ;    
+				    }
+				} else {
+				    echo "NO RESULT";
+				}
+		}
+
+		//INSEEEEEEEEEEEEEERRRRRRRRRRRRRRRRRTTTTTTTTTTTTTTT
+		function insert_game($title,$details,$picture){
+			$conn = $this->connectdb($GLOBALS['host'],$GLOBALS['user'],$GLOBALS['pass'],$GLOBALS['database']);
+			$sql =  "INSERT INTO Games (title,details,picture) VALUES ('$title','$details','$picture')";
+			return $conn->query($sql);
+		}
+
 
 	}
 
