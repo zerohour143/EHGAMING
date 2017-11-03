@@ -24,7 +24,6 @@
     <!-- Custom Fonts -->
     <link href="../../css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="../../css/dashboard-game.css">
-    <script type="text/javascript" src="../../js/file.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -80,22 +79,30 @@
 
         <div id="cont3 container-fluid">
             <div class="Games-list" id="g1">
+                <div class="listofgames_title"><span>List Of Games</span></div>
                 <?php
                     $ops->dataselectgame();
                 ?>                   
             </div>
-            <div class="Games-list" id="g2" style="background: blue;">
+            <div class="Games-list" id="g2">
+                <div class="addgame_input_container">
+                    <div class="addgame_title"><span>ADD GAME</span></div>
                 <form>
                     <div class="input-group input-group-lg addgame_input">
                       <span class="input-group-addon" id="sizing-addon1">Title: </span>
-                      <input type="text" class="form-control" placeholder="input title of game here" aria-describedby="sizing-addon1">
+                      <input required type="text" class="form-control" placeholder="input title of game here" aria-describedby="sizing-addon1">
                     </div>
                     <div class="input-group input-group-lg addgame_input">
                       <span class="input-group-addon" id="sizing-addon1">Details: </span>
-                      <input type="text" class="form-control" placeholder="input some details about the game" aria-describedby="sizing-addon1">
+                      <input required type="text" class="form-control" placeholder="input some details about the game" aria-describedby="sizing-addon1">
                     </div>
-                    <input type="file" class="form-control-file" id="exampleInputFile">
+                    <input required type="file" class="form-control-file gamefile" id="exampleInputFile">
+                    <div class="btn-group-lg addgamebtn" align="center">
+                        <input type="submit" class="btn btn-success">
+                        <input type='reset' value='Reset' name='reset' class="btn btn-danger">  
+                    </div>
                 </form>
+                </div>
             </div>
         </div>
 
