@@ -44,7 +44,7 @@
               <div class="row">
                 <div class="col-sm-6 col-sm-offset-3">
                   <a href="index.html#game">
-                    <p style="color: rgba(0, 120, 191, 100); font-weight:bolder;">Click here to go back our homepage.</p>
+                    <p style="color: rgba(0, 120, 191, 100); font-weight:bolder;">Click here to go back to our homepage.</p>
                   </a>
                 </div>
               </div>

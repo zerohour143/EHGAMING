@@ -65,9 +65,11 @@
 			return $conn->query($sql);
 		}
 
+//LOGINNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+
 		function login($uname,$password){
 			$conn = $this->connectdb($GLOBALS['host'],$GLOBALS['user'],$GLOBALS['pass'],$GLOBALS['database']);
-			$sql =  "SELECT * FROM list WHERE firstname = '$uname' AND lastname = '$password'";
+			$sql =  "SELECT * FROM users WHERE uname = '$uname' AND pass = '$password'";
 			$result = $conn->query($sql);
 			if (!$result) {
 			    printf("Error: %s\n", mysqli_error($conn));
@@ -75,9 +77,12 @@
 			}
 			$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 			if(empty($row)){
-				echo 'Username or Password is Incorrect';
+				echo '<script type="text/javascript">
+						alert("Username or Password is incorrect");
+						window.location.href = "../admin/login.html";
+					  </script>';
 			}else{
-				header('Location: https://www.google.com');
+				header('Location: ../admin/modules/dashboard.php');
 			}
 		}
 

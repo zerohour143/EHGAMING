@@ -1,8 +1,3 @@
-<?php
-    include_once '../../configs/config.php';
-    $ops = new functions;
-?>
-
 <html lang="en">
 
 <head>
@@ -24,7 +19,6 @@
     <!-- Custom Fonts -->
     <link href="../../css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="../../css/dashboard-game.css">
-    <script type="text/javascript" src="../../js/file.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -81,22 +75,21 @@
         <div id="cont3 container-fluid">
             <div class="Games-list" id="g1">
                 <?php
-                    $ops->dataselectgame();
-                ?>                   
-            </div>
-            <div class="Games-list" id="g2" style="background: blue;">
-                <form>
-                    <div class="input-group input-group-lg addgame_input">
-                      <span class="input-group-addon" id="sizing-addon1">Title: </span>
-                      <input type="text" class="form-control" placeholder="input title of game here" aria-describedby="sizing-addon1">
+
+                ?>
+                <div class="container-fluid game-item">
+                    <div class="game-img">
+                        <img src="../../img/3.jpg" width="80" height="80">                      
                     </div>
-                    <div class="input-group input-group-lg addgame_input">
-                      <span class="input-group-addon" id="sizing-addon1">Details: </span>
-                      <input type="text" class="form-control" placeholder="input some details about the game" aria-describedby="sizing-addon1">
+                    <div class="game-title">
+                        <span >BLACK DESSERT</span>
                     </div>
-                    <input type="file" class="form-control-file" id="exampleInputFile">
-                </form>
+                    <div class="game-details">
+                        <span >Date Added: 2017-11-03</span>
+                    </div>
+                </div>                        
             </div>
+            <div class="Games-list" id="g2" style="background: blue;"></div>
         </div>
 
                  <!-- Footer -->

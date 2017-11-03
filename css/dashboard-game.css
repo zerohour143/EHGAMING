@@ -1,0 +1,145 @@
+*{
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+	
+}
+
+
+#title{
+	margin: auto;
+	width:50%;
+	text-align: center;
+	margin-top: 2rem; 
+	color: rgba(85, 85, 85, 0.79);
+	font-size: 200%;
+	font-weight: 500;
+}
+
+#cont{
+
+}
+
+#cont2{
+	width: 100%;
+	text-align: center;
+}
+
+#tumbnail-cont{
+	width: 100%;
+	margin: 0 auto 0 auto;
+}
+
+.bttnstyle{
+	margin:0 auto;
+    display:block;
+	width: 15rem;
+	font-weight: 600;
+	border: solid rgba(85, 85, 85, 0.79) 1px;
+	background: white;
+	color: rgba(51, 51, 51, 0.76);
+	font-size: 1.5rem;
+}
+
+.bttnstyle:hover{
+	border: solid #337ab7 1px;
+	color: #337ab7;
+}
+
+.bttnstyle:focus{
+	background: #337ab7; 
+	color: white;
+}
+
+.cont2{
+	float: left;
+	width: 5rem;
+	height: 5rem;
+}
+
+.Games-list{
+	width: 100%;
+	height: 75%;
+	margin: 4rem 0 2.5rem 0;
+	float: left;
+	padding: 1.5rem 3rem;
+}
+
+#g2{
+	display:none;
+}
+
+.game-item{
+	width: 60rem;
+	padding: 1rem 5rem;
+	display: block;
+	display:table;
+	border: 1px rgba(70, 70, 70, 0.52);
+	border-style: none none solid none;
+}
+
+.game-img{
+	float:left;
+	opacity: 0.9;
+    filter: alpha(opacity=90);
+}
+
+.game-title{
+	font-size: 2.3rem;
+	margin: auto auto;
+	text-align: center;
+	word-wrap: break-word;
+	color: rgba(70, 70, 70, 0.52);
+	display:table-cell;
+ 	vertical-align:middle;
+ 	font-weight: 600;
+}
+
+.game-details{
+	font-size: 1rem;
+	margin: auto auto;
+	text-align: center;
+	word-wrap: break-word;
+	color: red;
+	display:table-cell;
+ 	vertical-align:middle;
+}
+
+.game-item:hover{
+	background: #337ab7;
+}
+.game-item:hover .game-title{
+	color: white;
+	font-size: 2.5rem;
+}
+.game-item:hover .game-img{
+    opacity: 1;
+    filter: alpha(opacity=100);
+    transform: scale(1.1, 1.1);
+}
+
+.addgame_input{
+	width: 50rem;
+}
+
+#footer{
+  	right: 0;
+  	bottom: 0;
+  	left: 0;
+  	float: left;
+  	text-align: center;
+  	height: 10rem;
+  	width: 100%
+}
+
+#foot{
+  	padding: 2%;
+}
+
+.foots{
+	margin-top: -1%;
+}
+
+

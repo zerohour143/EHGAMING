@@ -77,11 +77,40 @@
 			}
 			$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 			if(empty($row)){
-				echo 'Username or Password is Incorrect';
+				echo '<script type="text/javascript">
+						alert("Username or Password is incorrect");
+						window.location.href = "../admin/login.html";
+					  </script>';
 			}else{
 				header('Location: ../admin/modules/dashboard.php');
 			}
 		}
 
+		//GAMEEEE REAAAD DATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+	function dataselectgame(){
+			$conn = $this->connectdb($GLOBALS['host'],$GLOBALS['user'],$GLOBALS['pass'],$GLOBALS['database']);
+			$sql =  "SELECT title, picture, dateAdded FROM Games";
+			$result = $conn->query($sql);
+
+			if ($result->num_rows > 0) {
+			    while($row = $result->fetch_assoc()) {
+				   echo '<div class="container-fluid game-item">
+	                    <div class="game-img">
+	                        <img src="'.$row["picture"].'" width="80" height="80">                      
+	                    </div>
+	                    <div class="game-title">
+	                        <span>'.$row["title"].'</span>
+	                    </div>
+	                    <div class="game-details">
+	                        <span >Date Added: '.$row["dateAdded"].'</span>
+	                    </div>
+	                </div>' ;    
+			    }
+			} else {
+			    echo "NO RESULT";
+			}
 	}
+
+	}
+
 ?>
