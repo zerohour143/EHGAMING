@@ -18,7 +18,7 @@
 
     <!-- Custom Fonts -->
     <link href="../../css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="../../css/dashboard-game.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style-dashboard.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -51,46 +51,9 @@
     </nav>
 
     <!-- Page Content -->
-    <div class="container-fluid" id="cont">
-        <div id="title">
-            <span>Games Dashboard</span>
-        </div>
-        <hr>
-    
-        <address id="cont2">
-           <div id="tumbnail-cont">
-               <div class="col-lg-2 gtumb"></div>
-               <div class="col-lg-2 gtumb"></div>
-               <div class="col-lg-2 gtumb">
-                    <button class="bttnstyle" type="button" onClick="function1()">GAMES</button>
-               </div>
-               <div class="col-lg-2 gtumb">
-                    <button class="bttnstyle" type="button" onClick="function2()" id="bttn1">ADD GAMES</button>
-               </div>
-               <div class="col-lg-2 gtumb"></div>
-               <div class="col-lg-2 gtumb"></div>
-           </div>
-        </address>
+  
 
-        <div id="cont3 container-fluid">
-            <div class="Games-list" id="g1">
-                <?php
-
-                ?>
-                <div class="container-fluid game-item">
-                    <div class="game-img">
-                        <img src="../../img/3.jpg" width="80" height="80">                      
-                    </div>
-                    <div class="game-title">
-                        <span >BLACK DESSERT</span>
-                    </div>
-                    <div class="game-details">
-                        <span >Date Added: 2017-11-03</span>
-                    </div>
-                </div>                        
-            </div>
-            <div class="Games-list" id="g2" style="background: blue;"></div>
-        </div>
+  
 
                  <!-- Footer -->
             <footer id="footer" class="foots">
@@ -106,22 +69,4 @@
 
 </body>
 
-   <script type="text/javascript">
-      function function1(){
-        var elem0 = document.getElementById('g2');
-        var elem = document.getElementById('g1');
-
-        elem0.style.display='none';
-        elem.style.display = "block";
-      }
-
-      function function2(){
-        var elem0 = document.getElementById('g1');
-        var elem = document.getElementById('g2');
-
-
-        elem0.style.display='none';
-        elem.style.display = "block";
-      }
-    </script> 
 </html>

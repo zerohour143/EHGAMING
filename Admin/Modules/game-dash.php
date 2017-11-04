@@ -57,11 +57,16 @@
 
     <!-- Page Content -->
     <div class="container-fluid" id="cont">
+        <div class="crumbs">
+            <ul class="breadcrumb">
+                <li><a href="dashboard.php">Dashboard</a></li>
+                <li class="active">Games</li>
+            </ul>
+        </div>
         <div id="title">
             <span>Games Dashboard</span>
         </div>
         <hr>
-    
         <address id="cont2">
            <div id="tumbnail-cont">
                <div class="col-lg-2 gtumb"></div>

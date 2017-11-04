@@ -96,7 +96,7 @@
 
 				if ($result->num_rows > 0) {
 				    while($row = $result->fetch_assoc()) {
-					   echo '<div class="container-fluid game-item">
+					   echo '<a class="anchor" href="www.google.com"><div class="container-fluid game-item">
 		                    <div class="game-img">
 		                        <img src="'.$row["picture"].'" width="80" height="80">                      
 		                    </div>
@@ -106,7 +106,7 @@
 		                    <div class="game-details">
 		                        <span >Date Added: '.$row["dateAdded"].'</span>
 		                    </div>
-		                </div>' ; 
+		                </div></a>' ; 
 				    }
 				} else {
 				    echo "NO RESULT";

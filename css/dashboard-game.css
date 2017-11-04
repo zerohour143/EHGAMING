@@ -7,6 +7,13 @@
 	
 }
 
+a{
+	text-decoration: none;
+}
+
+.crumbs{
+	margin-top: 3rem;
+}
 
 #title{
 	margin: auto;
@@ -73,7 +80,9 @@
 	float: left;
 	padding: 1.5rem 3rem;
 }
-
+#g1{
+	overflow-y: auto;
+}
 #g2{
 	display:none;
 }
