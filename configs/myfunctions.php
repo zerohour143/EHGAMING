@@ -114,9 +114,9 @@
 		}
 
 		//INSEEEEEEEEEEEEEERRRRRRRRRRRRRRRRRTTTTTTTTTTTTTTT
-		function insert_game($title,$details,$picture){
+		function insert_game($title,$details,$path){
 			$conn = $this->connectdb($GLOBALS['host'],$GLOBALS['user'],$GLOBALS['pass'],$GLOBALS['database']);
-			$sql =  "INSERT INTO Games (title,details,picture) VALUES ('$title','$details','$picture')";
+			$sql =  "INSERT INTO Games (title,details,picture) VALUES ('$title','$details','$path')";
 			return $conn->query($sql);
 		}
 

@@ -3,14 +3,15 @@
 
 	$title = $_POST['title'];
 	$details = $_POST['details'];
-	$filename = basename($_FILES['file']["name"]);
-	$target_dir = "../../uploads/";
+	$target_dir = "../../../uploads/";
+	$target_dir2 = "../../uploads/";
+	$filename = basename($_FILES["file"]["name"]);
 	$path = $target_dir . $filename;
 //CONNNNNNNNNNNNNNNNECTTTTTTTTTTTTTTTTTTT
 	$ops = new functions;
 
 //INSERRRRRRRTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
-	if ($ops->insert_game($title,$details,$path) === TRUE) {
+	if ($ops->insert_game($title,$details,$target_dir2 . $filename) === TRUE) {
 		move_uploaded_file($_FILES["file"]["tmp_name"], $path);
 	    echo '<script type="text/javascript">
 						window.location.href = "../game-dash.php";
