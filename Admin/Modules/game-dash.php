@@ -96,7 +96,7 @@
                       <span class="input-group-addon" id="sizing-addon1">Details: </span>
                       <input required type="text" name="details" class="form-control" placeholder="input some details about the game" aria-describedby="sizing-addon1">
                     </div>
-                    <input required type="file" name="file" class="form-control-file gamefile" id="myFile" accept=".png, .jpg, .jpeg">
+                    <input required file type="file" name="file" class="form-control-file gamefile" id="myFile" accept=".png, .jpg, .jpeg">
                     <div class="btn-group-lg addgamebtn" align="center">
                         <input type="submit" class="btn btn-success">
                         <input type='reset' value='Reset' name='reset' class="btn btn-danger">  

@@ -106,7 +106,7 @@
 		                    <div class="game-details">
 		                        <span >Date Added: '.$row["dateAdded"].'</span>
 		                    </div>
-		                </div>' ;    
+		                </div>' ; 
 				    }
 				} else {
 				    echo "NO RESULT";
