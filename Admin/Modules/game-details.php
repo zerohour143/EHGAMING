@@ -18,7 +18,7 @@
 
     <!-- Custom Fonts -->
     <link href="../../css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="../../css/style-dashboard.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style-dashboard-gameDetails.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -52,10 +52,114 @@
 
     <!-- Page Content -->
   
+    <div id="content" class="container-fluid">
+        <div class="crumbs">
+            <ul class="breadcrumb">
+                <li><a href="dashboard.php">Dashboard</a></li>
+                <li><a href="game-dash.php">Games</a></li>
+                <li class="active">Black Desert</li>
+            </ul>
+        </div>
+        <div class="container-fluid image-container">
+            <img class="image img-fluid" src="../../img/3.jpg" width="350" height="200">
+        </div>
+        <div class="game-title container-fluid">
+            <span class="text-dark text-uppercase">black dessert</span>
+        </div>
+       <div id="tumbnail-cont">
+           <div class="col-lg-2 gtumb"></div>
+           <div class="col-lg-2 gtumb"></div>
+           <div class="col-lg-2 gtumb">
+                <button class="bttnstyle" type="button" onClick="function1()">EDIT SERVICES</button>
+           </div>
+           <div class="col-lg-2 gtumb">
+                <button class="bttnstyle" type="button" onClick="function2()" id="bttn1">ADD SERVICES</button>
+           </div>
+           <div class="col-lg-2 gtumb"></div>
+           <div class="col-lg-2 gtumb"></div>
+       </div>
 
+       <div id="cont2">
+           <div class="Services-games" id="g1">
+                <div class="addservice_input_container">
+                    <form method="POST" action="functions/add-service.php" enctype="multipart/form-data">
+                        <div class="input-group input-group-lg addservice_input">
+                          <span class="input-group-addon" id="sizing-addon1">Service Title: </span>
+                          <input required type="text" name="title" class="form-control" placeholder="Input service title" aria-describedby="sizing-addon1">
+                        </div>
+                        <div class="input-group input-group-lg addservice_input">
+                          <span class="input-group-addon"  id="sizing-addon1">Price: $</span>
+                          <input required type="number" name="price" class="form-control" placeholder="Input Price" aria-describedby="sizing-addon1">
+                        </div>
+                        <div class="input-group input-group-lg addservice_input">
+                          <span class="input-group-addon"  id="sizing-addon1">Category</span>
+                          <select name="category" class="form-control" aria-describedby="sizing-addon1">
+                              <option value="power leveling">Power Leveling</option>
+                              <option value="farming">Farming</option>
+                              <option value="contribution points">Contribution Points</option>
+                              <option value="customize">Customize</option>
+                           </select>
+                        </div>
+                        <div class="input-group input-group-lg addservice_input">
+                          <span class="input-group-addon"  id="sizing-addon1">Details</span>
+                          <input required type="details" name="details" class="form-control" placeholder="Input Details" aria-describedby="sizing-addon1"  rows="2" cols="20">
+                        </div>
+                        <div class="btn-group-lg addservicebtn" align="center">
+                            <input type="submit" class="btn btn-success">
+                            <input type='reset' value='Reset' name='reset' class="btn btn-danger">  
+                        </div>
+                    </form>
+                </div>           
+            </div> 
+             <div class="Edit-Service container-fluid" id="g2">
+                <div class="serviceItem container-fluid">
+                    <span class="text-primary">lvl  20-30</span>
+                    <span class="text-danger">$5</span>
+                    <span class="text-success">PowerLeveling</span>
+                    <span class="text-secondary">lorem ipsum dolor yeah.. hello hello. hii</span>
+                </div>
+                <div class="serviceItem container-fluid">
+                    <span class="text-primary">lvl  20-30</span>
+                    <span class="text-danger">$5</span>
+                    <span class="text-success">PowerLeveling</span>
+                    <span class="text-secondary">lorem ipsum dolor yeah.. hello hello. hii</span>
+                </div>
+                <div class="serviceItem container-fluid">
+                    <span class="text-primary">lvl  20-30</span>
+                    <span class="text-danger">$5</span>
+                    <span class="text-success">PowerLeveling</span>
+                    <span class="text-secondary">lorem ipsum dolor yeah.. hello hello. hii</span>
+                </div>
+                <div class="serviceItem container-fluid">
+                    <span class="text-primary">lvl  20-30</span>
+                    <span class="text-danger">$5</span>
+                    <span class="text-success">PowerLeveling</span>
+                    <span class="text-secondary">lorem ipsum dolor yeah.. hello hello. hii</span>
+                </div>
+                <div class="serviceItem container-fluid">
+                    <span class="text-primary">lvl  20-30</span>
+                    <span class="text-danger">$5</span>
+                    <span class="text-success">PowerLeveling</span>
+                    <span class="text-secondary">lorem ipsum dolor yeah.. hello hello. hii</span>
+                </div>
+                <div class="serviceItem container-fluid">
+                    <span class="text-primary">lvl  20-30</span>
+                    <span class="text-danger">$5</span>
+                    <span class="text-success">PowerLeveling</span>
+                    <span class="text-secondary">lorem ipsum dolor yeah.. hello hello. hii</span>
+                </div>
+                <div class="serviceItem container-fluid">
+                    <span class="text-primary">lvl  20-30</span>
+                    <span class="text-danger">$5</span>
+                    <span class="text-success">PowerLeveling</span>
+                    <span class="text-secondary">lorem ipsum dolor yeah.. hello hello. hii</span>
+                </div>
+             </div>
+       </div>
+    </div>
   
 
-                 <!-- Footer -->
+    <!-- Footer -->
             <footer id="footer" class="foots">
                 <hr>
                 <div class="row" id="foot">
@@ -68,5 +172,29 @@
     <!-- /.container -->
 
 </body>
+
+ <script type="text/javascript">
+      function function1(){
+        var elem0 = document.getElementById('g1');
+        var elem = document.getElementById('g2');
+
+        elem0.style.display='none';
+        elem.style.display = "block";
+      }
+
+      function function2(){
+        var elem0 = document.getElementById('g2');
+        var elem = document.getElementById('g1');
+
+
+        elem0.style.display='none';
+        elem.style.display = "block";
+
+        function myFunction() {
+            var x = document.getElementById("myFile").value;
+            document.getElementById("demo").innerHTML = x;
+        }
+      }
+    </script>
 
 </html>

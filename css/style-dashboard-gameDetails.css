@@ -1,0 +1,148 @@
+*{
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+	
+}
+
+.breadcrumb{
+	margin-top: 4rem;
+}
+
+
+.image-container{
+	margin: 4rem 0 2rem 0;
+	float: left;
+	width: 100%;
+	display:table-cell; 
+	vertical-align:middle; 
+	text-align:center;
+}
+
+.image{
+	margin: auto;
+}
+
+.game-title{
+	float: left;
+	width: 100%;
+	display:table-cell; 
+	vertical-align:middle; 
+	text-align:center;
+	margin-bottom: 4rem;
+}
+
+.game-title span{
+	font-size: 3.5rem;
+	color: rgba(70, 70, 70, 0.52);
+	font-weight: 600;
+}
+
+#g1{
+	overflow-y: auto;
+}
+#g1{
+	display:none;
+}
+
+.bttn-cont{
+	margin-bottom: 5rem;
+}
+
+#tumbnail-cont{
+	width: 100%;
+	margin: 0 auto 0 auto;
+}
+
+.bttnstyle{
+	margin:0 auto;
+    display:block;
+	width: 15rem;
+	font-weight: 600;
+	border: solid rgba(85, 85, 85, 0.79) 1px;
+	background: white;
+	color: rgba(51, 51, 51, 0.76);
+	font-size: 1.5rem;
+}
+
+.bttnstyle:hover{
+	border: solid #337ab7 1px;
+	color: #337ab7;
+}
+
+.bttnstyle:focus{
+	background: #337ab7; 
+	color: white;
+}
+
+#cont2{
+	margin-top: 45rem;
+}
+
+.addservice_input_container{
+	margin: 0 auto;
+	width:50rem;
+}
+
+.addservice_input,
+.addservicebtn{
+	margin-top: 2rem;
+}
+
+.addservicebtn input{
+	margin-top: 3rem;
+	margin-right: 1.5rem;
+}
+
+.Edit-Service{
+	width: 100%;
+	float: left;
+	display:table-cell; 
+	vertical-align:middle; 
+	text-align:center;
+	margin-bottom: 5rem;
+}
+
+.serviceItem{
+	width: 50%;
+	border-bottom: 1px solid rgba(70, 70, 70, 0.52);
+	padding: 2rem 2rem;
+}
+
+.serviceItem span{
+	margin-right: 1rem;
+}
+
+.serviceItem span:nth-child(1),
+.serviceItem span:nth-child(2),
+.serviceItem span:nth-child(3){
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+.serviceItem span:nth-child(4){
+	font-size: 1.5rem;
+	font-weight: 400;
+}
+
+
+#footer{
+  	right: 0;
+  	bottom: 0;
+  	left: 0;
+  	float: left;
+  	text-align: center;
+  	height: 10rem;
+  	width: 100%
+}
+
+#foot{
+  	padding: 2%;
+}
+
+.foots{
+	margin-top: -1%;
+}
+

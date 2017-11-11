@@ -1,6 +1,7 @@
 <?php
 	include_once '../../../configs/config.php';
 
+	$gid = '3';
 	$title = $_POST['title'];
 	$details = $_POST['details'];
 	$target_dir = "../../uploads/";

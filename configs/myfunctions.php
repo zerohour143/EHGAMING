@@ -96,9 +96,9 @@
 
 				if ($result->num_rows > 0) {
 				    while($row = $result->fetch_assoc()) {
-					   echo '<a class="anchor" href="www.google.com"><div class="container-fluid game-item">
+					   echo '<a class="anchor" href="game-details.php"><div class="container-fluid game-item">
 		                    <div class="game-img">
-		                        <img src="'.$row["picture"].'" width="80" height="80">                      
+		                        <img class="img-thumbnail" src="'.$row["picture"].'" width="150" height="150">                      
 		                    </div>
 		                    <div class="game-title">
 		                        <span>'.$row["title"].'</span>
@@ -119,6 +119,14 @@
 			$sql =  "INSERT INTO Games (title,details,picture) VALUES ('$title','$details','$path')";
 			return $conn->query($sql);
 		}
+
+		function insert_services($gid,$title,$price,$category,$details){
+			$conn = $this->connectdb($GLOBALS['host'],$GLOBALS['user'],$GLOBALS['pass'],$GLOBALS['database']);
+			$sql =  "INSERT INTO services (gid,serviceName,price,category,details) VALUES ('$gid','$title','$price','$category','$details')";
+			 echo("Error description: " . mysqli_error($conn));
+			return $conn->query($sql);
+		}
+
 
 
 	}
