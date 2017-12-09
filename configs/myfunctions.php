@@ -91,12 +91,12 @@
 		//GAMEEEE REAAAD DATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 		function dataselectgame(){
 				$conn = $this->connectdb($GLOBALS['host'],$GLOBALS['user'],$GLOBALS['pass'],$GLOBALS['database']);
-				$sql =  "SELECT title, picture, dateAdded FROM Games";
+				$sql =  "SELECT title, gid, picture, dateAdded FROM Games";
 				$result = $conn->query($sql);
 
 				if ($result->num_rows > 0) {
 				    while($row = $result->fetch_assoc()) {
-					   echo '<a class="anchor" href="game-details.php"><div class="container-fluid game-item">
+					   echo '<a class="anchor" href="game-details.php?gid='.$row["gid"].'"><div class="container-fluid game-item">
 		                    <div class="game-img">
 		                        <img class="img-thumbnail" src="'.$row["picture"].'" width="150" height="150">                      
 		                    </div>
@@ -122,8 +122,8 @@
 
 		function insert_services($gid,$title,$price,$category,$details){
 			$conn = $this->connectdb($GLOBALS['host'],$GLOBALS['user'],$GLOBALS['pass'],$GLOBALS['database']);
-			$sql =  "INSERT INTO services (gid,serviceName,price,category,details) VALUES ('$gid','$title','$price','$category','$details')";
-			 echo("Error description: " . mysqli_error($conn));
+			//$sql =  "INSERT INTO services (serviceName,gid,price,category,details) VALUES ('$title','$gid','$price','$category','$details')";
+			$sql =  "INSERT INTO services (serviceName,price,category,gid) VALUES ('$title','$price','$category','$gid')";
 			return $conn->query($sql);
 		}
 

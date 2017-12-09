@@ -1,7 +1,7 @@
 <?php
 	include_once '../../../configs/config.php';
 
-	$gid = '3';
+	$gid = $_POST['gid'];
 	$title = $_POST['title'];
 	$price = $_POST['price'];
 	$category = $_POST['category'];
@@ -10,7 +10,6 @@
 	//echo $gid." ".$title." ".$price." ".$category.$details;
 
 	$ops = new functions;
-
 	if ($ops->insert_services($gid,$title,$price,$category,$details) === TRUE) {
 	    echo '<script type="text/javascript">
 						window.location.href = "../game-details.php";

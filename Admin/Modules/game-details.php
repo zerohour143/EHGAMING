@@ -108,6 +108,7 @@
                             <input type="submit" class="btn btn-success">
                             <input type='reset' value='Reset' name='reset' class="btn btn-danger">  
                         </div>
+                        <input type="hidden" name="gid" id="hiddenField" value="<?php echo $_GET["gid"] ?>"/>
                     </form>
                 </div>           
             </div> 
