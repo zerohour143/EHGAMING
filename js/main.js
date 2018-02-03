@@ -80,7 +80,7 @@ $("#countdown").countdown({
 
 function() {
 // This will run when the countdown ends
- alert("We're Out Now");
+ //alert("We're Out Now");
 });
      
        
