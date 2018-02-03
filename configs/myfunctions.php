@@ -96,9 +96,15 @@
 
 				if ($result->num_rows > 0) {
 				    while($row = $result->fetch_assoc()) {
+				    	if (file_exists($row['picture'])){
+				    		$image = $row['picture'];
+				    	}else{
+				    		$image = "https://www.bailey-parts.co.uk/catalogimages/products/not-found.png?mode=crop&scale=both&quality=80&width=580&height=435";
+				    	}
+
 					   echo '<a class="anchor" href="game-details.php?gid='.$row["gid"].'"><div class="container-fluid game-item">
 		                    <div class="game-img">
-		                        <img class="img-thumbnail" src="'.$row["picture"].'" width="150" height="150">                      
+		                        <img class="img-thumbnail" src="'.$image.'" width="150" height="150">                      
 		                    </div>
 		                    <div class="game-title">
 		                        <span>'.$row["title"].'</span>
@@ -113,15 +119,42 @@
 				}
 		}
 
-
-		function dataselectServices(){
+		function GameImage($gid){ 	//retrieve game image path.
 			$conn = $this->connectdb($GLOBALS['host'],$GLOBALS['user'],$GLOBALS['pass'],$GLOBALS['database']);
-				$sql =  "SELECT serviceName, gid, price, category, details, PaymentMethod FROM services";
+			$sql =  "SELECT picture FROM Games WHERE gid = '$gid'";
+			$result = $conn->query($sql);
+
+			if ($result->num_rows > 0 ) {
+				    while($row = $result->fetch_assoc()) {
+				    	if (file_exists($row['picture'])){
+				    		$image = $row['picture'];
+				    	}else{
+				    		$image = "https://www.bailey-parts.co.uk/catalogimages/products/not-found.png?mode=crop&scale=both&quality=80&width=580&height=435";
+				    	}
+					   echo '<img class="image img-fluid" src="'.$image.'" width="350" height="200">' ; 
+				    }
+				} else {
+					echo "No game in the List";    
+				}
+		}
+
+
+		function dataselectServices($gid){
+			$conn = $this->connectdb($GLOBALS['host'],$GLOBALS['user'],$GLOBALS['pass'],$GLOBALS['database']);
+				$sql =  "SELECT serviceName, gid, price, category, details, PaymentMethod 
+				         FROM services
+				         WHERE gid = '$gid'";
 				$result = $conn->query($sql);
 
 				if ($result->num_rows > 0) {
 				    while($row = $result->fetch_assoc()) {
-					   echo '' ; 
+					   echo '<div class="serviceItem container-fluid">
+			                    <span class="text-primary">'.$row['serviceName'].'</span>
+			                    <span class="text-danger">'.$row['price'].'</span>
+			                    <span class="text-success">'.$row['category'].'</span>
+			                    <span class="text-secondary">'.$row['details'].'</span>
+			                    <span class="bg-danger text-danger">'.$row['PaymentMethod'].'</span>
+			                </div>' ; 
 				    }
 				} else {
 				    echo "NO RESULT";

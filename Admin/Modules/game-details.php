@@ -1,3 +1,9 @@
+<?php
+    include_once '../../configs/config.php';
+    $ops = new functions;
+    $gid = $_GET["gid"];
+?>
+
 <html lang="en">
 
 <head>
@@ -61,7 +67,7 @@
             </ul>
         </div>
         <div class="container-fluid image-container">
-            <img class="image img-fluid" src="../../img/3.jpg" width="350" height="200">
+         <?php $ops->GameImage($gid); ?>
         </div>
         <div class="game-title container-fluid">
             <span class="text-dark text-uppercase">black dessert</span>
@@ -115,46 +121,14 @@
                             <input type="submit" class="btn btn-success">
                             <input type='reset' value='Reset' name='reset' class="btn btn-danger">  
                         </div>
-                        <input type="hidden" name="gid" id="hiddenField" value="<?php echo $_GET["gid"] ?>"/>
+                        <input type="hidden" name="gid" id="hiddenField" value="<?php echo $gid?>"/>
                     </form>
                 </div>           
             </div> 
              <div class="Edit-Service container-fluid" id="g2">
-                <div class="serviceItem container-fluid">
-                    <span class="text-primary">lvl  20-30</span>
-                    <span class="text-danger">$5</span>
-                    <span class="text-success">PowerLeveling</span>
-                    <span class="text-secondary">lorem ipsum dolor yeah.. hello hello. hii</span>
-                    <span class="bg-danger text-danger">Pay using Paypal</span>
-                </div>
-                <div class="serviceItem container-fluid">
-                    <span class="text-primary">lvl  20-30</span>
-                    <span class="text-danger">$5</span>
-                    <span class="text-success">PowerLeveling</span>
-                    <span class="text-secondary">lorem ipsum dolor yeah.. hello hello. hii</span>
-                    <span class="bg-danger text-danger">Pay using Paypal</span>
-                </div>
-                <div class="serviceItem container-fluid">
-                    <span class="text-primary">lvl  20-30</span>
-                    <span class="text-danger">$5</span>
-                    <span class="text-success">PowerLeveling</span>
-                    <span class="text-secondary">lorem ipsum dolor yeah.. hello hello. hii</span>
-                    <span class="bg-danger text-danger">Pay using Paypal</span>
-                </div>
-                <div class="serviceItem container-fluid">
-                    <span class="text-primary">lvl  20-30</span>
-                    <span class="text-danger">$5</span>
-                    <span class="text-success">PowerLeveling</span>
-                    <span class="text-secondary">lorem ipsum dolor yeah.. hello hello. hii</span>
-                    <span class="bg-danger text-danger">Pay using Paypal</span>
-                </div>
-                <div class="serviceItem container-fluid">
-                    <span class="text-primary">lvl  20-30</span>
-                    <span class="text-danger">$5</span>
-                    <span class="text-success">PowerLeveling</span>
-                    <span class="text-secondary">lorem ipsum dolor yeah.. hello hello. hii</span>
-                    <span class="bg-danger text-danger">Pay using Paypal</span>
-                </div>
+                <?php
+                  $ops->dataselectServices($gid);
+                ?>     
              </div>
        </div>
     </div>
