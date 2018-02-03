@@ -106,9 +106,10 @@
 }
 
 .serviceItem{
-	width: 50%;
+	width: 60%;
 	border-bottom: 1px solid rgba(70, 70, 70, 0.52);
 	padding: 2rem 2rem;
+	overflow: hidden;
 }
 
 .serviceItem span{

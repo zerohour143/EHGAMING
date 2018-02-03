@@ -113,6 +113,21 @@
 				}
 		}
 
+
+		function dataselectServices(){
+			$conn = $this->connectdb($GLOBALS['host'],$GLOBALS['user'],$GLOBALS['pass'],$GLOBALS['database']);
+				$sql =  "SELECT serviceName, gid, price, category, details, PaymentMethod FROM services";
+				$result = $conn->query($sql);
+
+				if ($result->num_rows > 0) {
+				    while($row = $result->fetch_assoc()) {
+					   echo '' ; 
+				    }
+				} else {
+				    echo "NO RESULT";
+				}
+		}
+
 		//INSEEEEEEEEEEEEEERRRRRRRRRRRRRRRRRTTTTTTTTTTTTTTT
 		function insert_game($title,$details,$path){
 			$conn = $this->connectdb($GLOBALS['host'],$GLOBALS['user'],$GLOBALS['pass'],$GLOBALS['database']);
@@ -120,10 +135,15 @@
 			return $conn->query($sql);
 		}
 
-		function insert_services($gid,$title,$price,$category,$details){
+		function insert_services($gid,$title,$price,$category,$details,$method){
 			$conn = $this->connectdb($GLOBALS['host'],$GLOBALS['user'],$GLOBALS['pass'],$GLOBALS['database']);
+			if($method == "1g"){
+				$payment = "Pay via Paypal";
+			}else if($method == "2g"){
+				$payment = "ContactUs";
+			}
 			//$sql =  "INSERT INTO services (serviceName,gid,price,category,details) VALUES ('$title','$gid','$price','$category','$details')";
-			$sql =  "INSERT INTO services (serviceName,price,category,gid) VALUES ('$title','$price','$category','$gid')";
+			$sql =  "INSERT INTO services (serviceName,price,category,gid,details,PaymentMethod) VALUES ('$title','$price','$category','$gid','$details','$payment')";
 			return $conn->query($sql);
 		}
 

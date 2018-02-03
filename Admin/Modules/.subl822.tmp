@@ -107,15 +107,15 @@
                         <div class="input-group input-group-lg addservice_input">
                           <span class="input-group-addon"  id="sizing-addon1">Payment Method</span>
                           <select name="PaymentMethod" class="form-control" aria-describedby="sizing-addon1">
-                              <option value="1g">Paypal</option>
-                              <option value="2g">ContactUs</option>
+                              <option value="Paypal">Paypal</option>
+                              <option value="contactus">ContactUs</option>
                            </select>
                         </div>
                         <div class="btn-group-lg addservicebtn" align="center">
                             <input type="submit" class="btn btn-success">
                             <input type='reset' value='Reset' name='reset' class="btn btn-danger">  
                         </div>
-                        <input type="hidden" name="gid" id="hiddenField" value="<?php echo $_GET["gid"] ?>"/>
+                        <input type="hidden" name="gid" id="hiddenField" value="1"/>
                     </form>
                 </div>           
             </div> 
@@ -125,35 +125,42 @@
                     <span class="text-danger">$5</span>
                     <span class="text-success">PowerLeveling</span>
                     <span class="text-secondary">lorem ipsum dolor yeah.. hello hello. hii</span>
-                    <span class="bg-danger text-danger">Pay using Paypal</span>
                 </div>
                 <div class="serviceItem container-fluid">
                     <span class="text-primary">lvl  20-30</span>
                     <span class="text-danger">$5</span>
                     <span class="text-success">PowerLeveling</span>
                     <span class="text-secondary">lorem ipsum dolor yeah.. hello hello. hii</span>
-                    <span class="bg-danger text-danger">Pay using Paypal</span>
                 </div>
                 <div class="serviceItem container-fluid">
                     <span class="text-primary">lvl  20-30</span>
                     <span class="text-danger">$5</span>
                     <span class="text-success">PowerLeveling</span>
                     <span class="text-secondary">lorem ipsum dolor yeah.. hello hello. hii</span>
-                    <span class="bg-danger text-danger">Pay using Paypal</span>
                 </div>
                 <div class="serviceItem container-fluid">
                     <span class="text-primary">lvl  20-30</span>
                     <span class="text-danger">$5</span>
                     <span class="text-success">PowerLeveling</span>
                     <span class="text-secondary">lorem ipsum dolor yeah.. hello hello. hii</span>
-                    <span class="bg-danger text-danger">Pay using Paypal</span>
                 </div>
                 <div class="serviceItem container-fluid">
                     <span class="text-primary">lvl  20-30</span>
                     <span class="text-danger">$5</span>
                     <span class="text-success">PowerLeveling</span>
                     <span class="text-secondary">lorem ipsum dolor yeah.. hello hello. hii</span>
-                    <span class="bg-danger text-danger">Pay using Paypal</span>
+                </div>
+                <div class="serviceItem container-fluid">
+                    <span class="text-primary">lvl  20-30</span>
+                    <span class="text-danger">$5</span>
+                    <span class="text-success">PowerLeveling</span>
+                    <span class="text-secondary">lorem ipsum dolor yeah.. hello hello. hii</span>
+                </div>
+                <div class="serviceItem container-fluid">
+                    <span class="text-primary">lvl  20-30</span>
+                    <span class="text-danger">$5</span>
+                    <span class="text-success">PowerLeveling</span>
+                    <span class="text-secondary">lorem ipsum dolor yeah.. hello hello. hii</span>
                 </div>
              </div>
        </div>
