@@ -102,7 +102,10 @@
 	display:table-cell; 
 	vertical-align:middle; 
 	text-align:center;
-	margin-bottom: 5rem;
+}
+
+.gapContFoot{
+	margin-bottom: 100rem;
 }
 
 .serviceItem{
@@ -133,15 +136,13 @@
 	font-weight: 400;
 }
 
+.division{
+	margin-top: 7.5rem;
+}
 
 #footer{
-  	right: 0;
-  	bottom: 0;
-  	left: 0;
-  	float: left;
   	text-align: center;
   	height: 10rem;
-  	width: 100%
 }
 
 #foot{

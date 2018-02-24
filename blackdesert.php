@@ -226,7 +226,7 @@
               </div>
 
                <div class="modal">
-                <input id="gold" type="checkbox" name="modal" tabindex="1">
+                <input id="gold" type="checkbox" name="modal" tabindex="2">
                 <label for="gold" >SILVER</label>
                 <div class="modal__overlay">
                   <div id="modal-header" columns="2">
@@ -326,7 +326,7 @@
                 </div>
               </div>
 
-                <div class="modal">
+          <div class="modal">
                 <input id="cstmize" type="checkbox" name="modal" tabindex="1">
                 <label for="cstmize" >CUSTOMIZE</label>
                 <div class="modal__overlay" id="cstmize-bigbox">
@@ -344,7 +344,6 @@
                     <div id="mail" class="container-fluid"><span><strong>Mail: </strong>Bobyan143@yahoo.com</span></div></a>
                 </div>
               </div>
-
           </div>
         </div>
       </section>

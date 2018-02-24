@@ -25,6 +25,7 @@
     <!-- Custom Fonts -->
     <link href="../../css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="../../css/style-dashboard-gameDetails.css">
+    <link href="../../css/modal_admin.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -125,18 +126,17 @@
                     </form>
                 </div>           
             </div> 
-             <div class="Edit-Service container-fluid" id="g2">
-                <?php
+             <address id="g2">     
+               <?php
                   $ops->dataselectServices($gid);
-                ?>     
-             </div>
+                ?>  
+             </address>
        </div>
     </div>
-  
 
     <!-- Footer -->
             <footer id="footer" class="foots">
-                <hr>
+                <hr class="division">
                 <div class="row" id="foot">
                     <div class="col-lg-12">
                         <p>Copyright &copy; EHGAMING</p>
@@ -169,6 +169,24 @@
             var x = document.getElementById("myFile").value;
             document.getElementById("demo").innerHTML = x;
         }
+      }
+
+      function enable(field) {
+         window.alert(field);
+        document.getElementById("titlefield").disabled = false;
+        document.getElementById("pricefield").disabled = false;
+        document.getElementById("categoryfield").disabled = false;
+        document.getElementById("detailsfield").disabled = false;
+        document.getElementById("pmethodfield").disabled = false;
+      }
+
+      function disable(field){
+        window.alert(field);
+        document.getElementById("titlefield").disabled = true;
+        document.getElementById("pricefield").disabled = true;
+        document.getElementById("categoryfield").disabled = true;
+        document.getElementById("detailsfield").disabled = true;
+        document.getElementById("pmethodfield").disabled = true;
       }
     </script>
 
