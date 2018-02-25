@@ -150,6 +150,7 @@ input:focus + label {
   width: 60% !important;
   height: 85% !important;
   top: 50;
+  box-shadow: 4px 3px;
 }
 
 #intro-srvc{
