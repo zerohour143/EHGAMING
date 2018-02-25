@@ -1,7 +1,7 @@
 <?php
-
 	class functions{
 		public $sname, $price, $category, $details, $pmethod;
+		
 
 		function connectdb($host, $user, $pass, $database){
 			$connect = mysqli_connect($host,$user,$pass,$database) or die("cannot connect to db");
@@ -159,8 +159,8 @@
 			                $pmethod = $row['PaymentMethod'];
 
 					   echo '<div class="Edit-Service container-fluid modal" id="g2">
-						   		 <input id="cstmize'.$sname.'" type="checkbox" name="modal" tabindex="2">
-						   		 <label for="cstmize'.$sname.'" >
+						   		 <input id="srvc'.$sname.'" type="checkbox" name="modal" tabindex="2">
+						   		 <label for="srvc'.$sname.'" >
 						   			<div class="serviceItem container-fluid">
 				                      <span class="text-primary">'.$sname.'</span>
 					                    <span class="text-danger">'.$price.'</span>
@@ -171,24 +171,24 @@
 				                </label>
 
 
-				               <div class="modal__overlay" id="cstmize-bigbox">
+				               <div class="modal__overlay" id="srvc-bigbox">
 							      <div id="modal-header" columns="2">
 							         <span >'.$sname.'</span>
-							         <label  id="closemodal" onclick="disable('.$name.')" for="cstmize'.$sname.'">&#10006;</label>
+							         <label  id="closemodal" onclick="disable(\''.$sname.'\')" for="srvc'.$sname.'">&#10006;</label>
 							      </div>  
 							      <div id="modal-content">
 							         <form method="POST" action="#" enctype="multipart/form-data"> 
                         <div class="input-group input-group-lg addservice_input">
                           <span class="input-group-addon" id="sizing-addon1">Service Title: </span>
-                          <input disabled id="titlefield"  required type="text" value="'.$sname.'" name="title" class="form-control" placeholder="Input service title" aria-describedby="sizing-addon1">
+                          <input disabled id="titlefield'.$sname.'"  required type="text" value="'.$sname.'" name="title" class="form-control" placeholder="Input service title" aria-describedby="sizing-addon1">
                         </div>
                         <div class="input-group input-group-lg addservice_input">
                           <span class="input-group-addon"  id="sizing-addon1">Price: $</span>
-                          <input disabled id="pricefield" required type="number" value="'.$price.'" name="price" class="form-control" placeholder="Input Price" aria-describedby="sizing-addon1">
+                          <input disabled id="pricefield'.$sname.'" required type="number" value="'.$price.'" name="price" class="form-control" placeholder="Input Price" aria-describedby="sizing-addon1">
                         </div>
                         <div class="input-group input-group-lg addservice_input">
                           <span class="input-group-addon"  id="sizing-addon1">Category</span>
-                          <select disabled id="categoryfield" name="category" value="'.$category.'" class="form-control" aria-describedby="sizing-addon1">
+                          <select disabled id="categoryfield'.$sname.'" name="category" value="'.$category.'" class="form-control" aria-describedby="sizing-addon1">
                               <option value="power leveling">Power Leveling</option>
                               <option value="farming">Farming</option>
                               <option value="contribution points">Contribution Points</option>
@@ -197,17 +197,17 @@
                         </div>
                         <div class="input-group input-group-lg addservice_input">
                           <span class="input-group-addon"  id="sizing-addon1">Details</span>
-                          <input disabled id="detailsfield" required type="details" value="'.$details.'" name="details" class="form-control" placeholder="Input Details" aria-describedby="sizing-addon1"  rows="2" cols="20">
+                          <input disabled id="detailsfield'.$sname.'" required type="details" value="'.$details.'" name="details" class="form-control" placeholder="Input Details" aria-describedby="sizing-addon1"  rows="2" cols="20">
                         </div>
                         <div class="input-group input-group-lg addservice_input">
                           <span class="input-group-addon"  id="sizing-addon1">Payment Method</span>
-                          <select disabled id="pmethodfield" name="PaymentMethod" value="'.$pmethod.'" class="form-control" aria-describedby="sizing-addon1">
+                          <select disabled id="pmethodfield'.$sname.'" name="PaymentMethod" value="'.$pmethod.'" class="form-control" aria-describedby="sizing-addon1">
                               <option value="1g">Paypal</option>
                               <option value="2g">ContactUs</option>
                            </select>
                         </div>
                         <div class="btn-group-lg btngroup" align="center">
-                            <button onclick="Disable('.$name.')" type="button" class="btn btn-danger editBtns editBtnreset">EDIT</button>
+                            <button onclick="enable(\''.$sname.'\')" type="button" class="btn btn-danger editBtns editBtnreset">EDIT</button>
                             <input type="submit" class="btn btn-success editBtns editBtnedit"> 
                         </div>
                  

@@ -171,22 +171,20 @@
         }
       }
 
-      function enable(field) {
-         window.alert(field);
-        document.getElementById("titlefield").disabled = false;
-        document.getElementById("pricefield").disabled = false;
-        document.getElementById("categoryfield").disabled = false;
-        document.getElementById("detailsfield").disabled = false;
-        document.getElementById("pmethodfield").disabled = false;
+      function enable(val) {
+        document.getElementById("titlefield"+val).disabled = false;
+        document.getElementById("pricefield"+val).disabled = false;
+        document.getElementById("categoryfield"+val).disabled = false;
+        document.getElementById("detailsfield"+val).disabled = false;
+        document.getElementById("pmethodfield"+val).disabled = false;
       }
 
-      function disable(field){
-        window.alert(field);
-        document.getElementById("titlefield").disabled = true;
-        document.getElementById("pricefield").disabled = true;
-        document.getElementById("categoryfield").disabled = true;
-        document.getElementById("detailsfield").disabled = true;
-        document.getElementById("pmethodfield").disabled = true;
+      function disable(val){
+        document.getElementById("titlefield"+val).disabled = true;
+        document.getElementById("pricefield"+val).disabled = true;
+        document.getElementById("categoryfield"+val).disabled = true;
+        document.getElementById("detailsfield"+val).disabled = true;
+        document.getElementById("pmethodfield"+val).disabled = true;
       }
     </script>
 

@@ -146,13 +146,13 @@ input:focus + label {
   padding: 4rem 15rem 2rem 14rem;
 }
 
-#cstmize-bigbox{
+#srvc-bigbox{
   width: 60% !important;
   height: 85% !important;
   top: 50;
 }
 
-#intro-cstmize{
+#intro-srvc{
   margin-bottom: 1.5rem;
 }
 
