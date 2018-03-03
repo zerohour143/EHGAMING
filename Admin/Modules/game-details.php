@@ -72,7 +72,7 @@
          <?php $ops->GameImage($gid); ?>
         </div>
         <div class="game-title container-fluid">
-            <span id="gameTitle" class="text-dark text-uppercase">black dessert</span>
+            <span id="gameTitle" class="text-dark text-uppercase"> <?php $ops->getTitle($gid); ?></span>
         </div>
        <div id="tumbnail-cont">
            <div class="col-lg-2 gtumb"></div>
