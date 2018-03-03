@@ -143,12 +143,12 @@ input:focus + label {
   height: 100%;
   width: 100%;
   background: #2700ff17;
-  padding: 4rem 15rem 2rem 14rem;
+  padding: 2rem 15rem 4rem 14rem;
 }
 
 #srvc-bigbox{
   width: 60% !important;
-  height: 85% !important;
+  height: 87% !important;
   top: 50;
   box-shadow: 10px 10px 5px grey;
 }

@@ -179,6 +179,7 @@
         document.getElementById("detailsfield"+val).disabled = false;
         document.getElementById("pmethodfield"+val).disabled = false;
         document.getElementById("sbmitBttn"+val).disabled = false;
+        document.getElementById("fileBrowse"+val).disabled = false;
       }
 
       function disable(val){
@@ -188,6 +189,7 @@
         document.getElementById("detailsfield"+val).disabled = true;
         document.getElementById("pmethodfield"+val).disabled = true;
          document.getElementById("sbmitBttn"+val).disabled = true;
+         document.getElementById("fileBrowse"+val).disabled = true;
       }
     </script>
 

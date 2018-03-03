@@ -154,6 +154,21 @@
 		}
 
 
+		function getImagePath($gid){ 	//retrieve game image path.
+			$conn = $this->connectdb($GLOBALS['host'],$GLOBALS['user'],$GLOBALS['pass'],$GLOBALS['database']);
+			$sql =  "SELECT picture FROM Games WHERE gid = '$gid'";
+			$result = $conn->query($sql);
+
+			if ($result->num_rows > 0 ) {
+				    while($row = $result->fetch_assoc()) {
+					   return $row['picture']; 
+				    }
+				}else {
+					echo "Error has occured";    
+				}
+		}
+
+
 		function dataselectServices($gid){
 			$conn = $this->connectdb($GLOBALS['host'],$GLOBALS['user'],$GLOBALS['pass'],$GLOBALS['database']);
 				$sql =  "SELECT serviceName, sid, price, category, details, PaymentMethod 
@@ -191,7 +206,11 @@
 							         <label  id="closemodal" onclick="disable(\''.$sname.'\')" for="srvc'.$sname.'">&#10006;</label>
 							      </div>  
 							      <div id="modal-content">
-							        <form method="POST" action="functions/editServices.php" enctype="multipart/form-data"> 
+							        <form method="POST" action="functions/editServices.php" enctype="multipart/form-data">
+					                    <address> 
+					                    	<label for="fileBrowse'.$sname.'" >Image</label>
+					                    	 <input disabled id="fileBrowse'.$sname.'" class="imageBrowser" file type="file" name="file" class="form-control-file gamefile" id="myFile" accept=".png, .jpg, .jpeg">
+					                    </address>
 				                        <div class="input-group input-group-lg addservice_input">
 				                          <span class="input-group-addon" id="sizing-addon1">Service Title: </span>
 				                          <input disabled id="titlefield'.$sname.'"  required type="text" value="'.$sname.'" name="sname" class="form-control" placeholder="Input service title" aria-describedby="sizing-addon1">
