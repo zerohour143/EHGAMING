@@ -142,7 +142,7 @@
 
 		function dataselectServices($gid){
 			$conn = $this->connectdb($GLOBALS['host'],$GLOBALS['user'],$GLOBALS['pass'],$GLOBALS['database']);
-				$sql =  "SELECT serviceName, gid, price, category, details, PaymentMethod 
+				$sql =  "SELECT serviceName, sid, price, category, details, PaymentMethod 
 				         FROM services
 				         WHERE gid = '$gid'";
 				$result = $conn->query($sql);
@@ -151,7 +151,7 @@
 					 $i=0;
 				    while($row = $result->fetch_assoc()) {
 
-
+			                $sid = $row['sid'];
 			                $sname = $row['serviceName'];
 			                $price = $row['price'];
 			                $category = $row['category'];
@@ -177,42 +177,42 @@
 							         <label  id="closemodal" onclick="disable(\''.$sname.'\')" for="srvc'.$sname.'">&#10006;</label>
 							      </div>  
 							      <div id="modal-content">
-							         <form method="POST" action="#" enctype="multipart/form-data"> 
-                        <div class="input-group input-group-lg addservice_input">
-                          <span class="input-group-addon" id="sizing-addon1">Service Title: </span>
-                          <input disabled id="titlefield'.$sname.'"  required type="text" value="'.$sname.'" name="title" class="form-control" placeholder="Input service title" aria-describedby="sizing-addon1">
-                        </div>
-                        <div class="input-group input-group-lg addservice_input">
-                          <span class="input-group-addon"  id="sizing-addon1">Price: $</span>
-                          <input disabled id="pricefield'.$sname.'" required type="number" value="'.$price.'" name="price" class="form-control" placeholder="Input Price" aria-describedby="sizing-addon1">
-                        </div>
-                        <div class="input-group input-group-lg addservice_input">
-                          <span class="input-group-addon"  id="sizing-addon1">Category</span>
-                          <select disabled id="categoryfield'.$sname.'" name="category" value="'.$category.'" class="form-control" aria-describedby="sizing-addon1">
-                              <option value="power leveling">Power Leveling</option>
-                              <option value="farming">Farming</option>
-                              <option value="contribution points">Contribution Points</option>
-                              <option value="customize">Customize</option>
-                           </select>
-                        </div>
-                        <div class="input-group input-group-lg addservice_input">
-                          <span class="input-group-addon"  id="sizing-addon1">Details</span>
-                          <input disabled id="detailsfield'.$sname.'" required type="details" value="'.$details.'" name="details" class="form-control" placeholder="Input Details" aria-describedby="sizing-addon1"  rows="2" cols="20">
-                        </div>
-                        <div class="input-group input-group-lg addservice_input">
-                          <span class="input-group-addon"  id="sizing-addon1">Payment Method</span>
-                          <select disabled id="pmethodfield'.$sname.'" name="PaymentMethod" value="'.$pmethod.'" class="form-control" aria-describedby="sizing-addon1">
-                              <option value="1g">Paypal</option>
-                              <option value="2g">ContactUs</option>
-                           </select>
-                        </div>
-                        <div class="btn-group-lg btngroup" align="center">
-                            <button onclick="enable(\''.$sname.'\')" type="button" class="btn btn-danger editBtns editBtnreset">EDIT</button>
-                            <input type="submit" class="btn btn-success editBtns editBtnedit"> 
-                        </div>
-                 
-                        <input type="hidden" name="gid" id="hiddenField" value="<?php echo $gid?>"/>
-                    </form>
+							        <form method="POST" action="functions/editServices.php" enctype="multipart/form-data"> 
+				                        <div class="input-group input-group-lg addservice_input">
+				                          <span class="input-group-addon" id="sizing-addon1">Service Title: </span>
+				                          <input disabled id="titlefield'.$sname.'"  required type="text" value="'.$sname.'" name="sname" class="form-control" placeholder="Input service title" aria-describedby="sizing-addon1">
+				                        </div>
+				                        <div class="input-group input-group-lg addservice_input">
+				                          <span class="input-group-addon"  id="sizing-addon1">Price: $</span>
+				                          <input disabled id="pricefield'.$sname.'" required type="number" value="'.$price.'" name="price" class="form-control" placeholder="Input Price" aria-describedby="sizing-addon1">
+				                        </div>
+				                        <div class="input-group input-group-lg addservice_input">
+				                          <span class="input-group-addon"  id="sizing-addon1">Category</span>
+				                          <select disabled id="categoryfield'.$sname.'" name="category" value="'.$category.'" class="form-control" aria-describedby="sizing-addon1">
+				                              <option value="power leveling">Power Leveling</option>
+				                              <option value="farming">Farming</option>
+				                              <option value="contribution points">Contribution Points</option>
+				                              <option value="customize">Customize</option>
+				                           </select>
+				                        </div>
+				                        <div class="input-group input-group-lg addservice_input">
+				                          <span class="input-group-addon"  id="sizing-addon1">Details</span>
+				                          <input disabled id="detailsfield'.$sname.'" required type="details" value="'.$details.'" name="details" class="form-control" placeholder="Input Details" aria-describedby="sizing-addon1"  rows="2" cols="20">
+				                        </div>
+				                        <div class="input-group input-group-lg addservice_input">
+				                          <span class="input-group-addon"  id="sizing-addon1">Payment Method</span>
+				                          <select disabled id="pmethodfield'.$sname.'" name="PaymentMethod" value="'.$pmethod.'" class="form-control" aria-describedby="sizing-addon1">
+				                              <option value="1g">Paypal</option>
+				                              <option value="2g">ContactUs</option>
+				                           </select>
+				                        </div>
+				                        <div class="btn-group-lg btngroup" align="center">
+				                            <button onclick="enable(\''.$sname.'\')" type="button" class="btn btn-danger editBtns editBtnreset">EDIT</button>
+				                            <input disabled id="sbmitBttn'.$sname.'" type="submit" class="btn btn-success editBtns editBtnedit"> 
+				                        </div>
+				                        <input type="hidden" name="sid" id="hiddenField" value="'.$sid.'"/>
+				                        <input type="hidden" name="gid" id="hiddenField" value="'.$gid.'"/>
+				                    </form>
 							      </div>  
 							    </div>
 						    </div>' ;
@@ -242,6 +242,12 @@
 			//$sql =  "INSERT INTO services (serviceName,gid,price,category,details) VALUES ('$title','$gid','$price','$category','$details')";
 			$sql =  "INSERT INTO services (serviceName,price,category,gid,details,PaymentMethod) VALUES ('$title','$price','$category','$gid','$details','$payment')";
 			return $conn->query($sql);
+		}
+
+		//UPDAAAAAAAAAAAAAAAAATTTTTTTTTTTEEEEEE
+
+		function edit_services($sid,$title,$price,$category,$details,$method){
+			return true;
 		}
 
 

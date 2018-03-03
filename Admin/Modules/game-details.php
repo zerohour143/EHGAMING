@@ -10,7 +10,8 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -71,7 +72,7 @@
          <?php $ops->GameImage($gid); ?>
         </div>
         <div class="game-title container-fluid">
-            <span class="text-dark text-uppercase">black dessert</span>
+            <span id="gameTitle" class="text-dark text-uppercase">black dessert</span>
         </div>
        <div id="tumbnail-cont">
            <div class="col-lg-2 gtumb"></div>
@@ -177,6 +178,7 @@
         document.getElementById("categoryfield"+val).disabled = false;
         document.getElementById("detailsfield"+val).disabled = false;
         document.getElementById("pmethodfield"+val).disabled = false;
+        document.getElementById("sbmitBttn"+val).disabled = false;
       }
 
       function disable(val){
@@ -185,6 +187,7 @@
         document.getElementById("categoryfield"+val).disabled = true;
         document.getElementById("detailsfield"+val).disabled = true;
         document.getElementById("pmethodfield"+val).disabled = true;
+         document.getElementById("sbmitBttn"+val).disabled = true;
       }
     </script>
 
