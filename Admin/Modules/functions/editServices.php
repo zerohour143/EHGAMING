@@ -1,5 +1,5 @@
 <?php
-	include_once '../../../configs/config.php';+
+	include_once '../../../configs/config.php';
 	$ops = new functions;
 
 	$sid = $_POST['sid'];
@@ -21,7 +21,7 @@
 
 
 	$ops = new functions;
-	if ($ops->edit_services($sid,$title,$price,$category,$details,$method) === TRUE) {
+	if ($ops->edit_services($image,$sid,$title,$price,$category,$details,$method) === TRUE) {
 	    echo '<script type="text/javascript">
 	    		window.location.href = "../game-details.php?gid='.$gid.'#gameTitle";
 	    	</script>';

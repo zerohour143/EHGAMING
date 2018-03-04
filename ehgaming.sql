@@ -105,6 +105,15 @@ CREATE TABLE IF NOT EXISTS `users` (
   `utype` int(11) DEFAULT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
+
+
+CREATE TABLE IF NOT EXISTS `Gallery` (
+  `imageid` int(11) NOT NULL,
+  `title` varchar(25) NOT NULL,
+  `album` varchar(25) NOT NULL,
+ `dateAdded` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
 --
 -- Dumping data for table `users`
 --

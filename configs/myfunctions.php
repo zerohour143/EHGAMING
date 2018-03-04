@@ -186,6 +186,15 @@
 			                $category = $row['category'];
 			                $details = $row['details'];
 			                $pmethod = $row['PaymentMethod'];
+ 
+			                $paypal = " ";
+			                $contactus = " ";
+
+			                if($pmethod == 'Paypal'){
+			                	$paypal = "selected";
+			                }else if ($pmethod == 'ContactUs'){
+			                	$contactus = "selected";
+			                }
 
 					   echo '<div class="Edit-Service container-fluid modal" id="g2">
 						   		 <input id="srvc'.$sname.'" type="checkbox" name="modal" tabindex="2">
@@ -222,10 +231,10 @@
 				                        <div class="input-group input-group-lg addservice_input">
 				                          <span class="input-group-addon"  id="sizing-addon1">Category</span>
 				                          <select disabled id="categoryfield'.$sname.'" name="category" value="'.$category.'" class="form-control" aria-describedby="sizing-addon1">
-				                              <option value="power leveling">Power Leveling</option>
-				                              <option value="farming">Farming</option>
-				                              <option value="contribution points">Contribution Points</option>
-				                              <option value="customize">Customize</option>
+				                              <option value="power leveling"'; if($category == "power leveling"){echo "selected";} echo'>Power Leveling</option>
+				                              <option value="farming"'; if($category == "farming"){echo "selected";} echo'>Farming</option>
+				                              <option value="contribution points"'; if($category == "contribution points"){echo "selected";} echo'>Contribution Points</option>
+				                              <option value="customize"'; if($category == "customize"){echo "selected";} echo'>Customize</option>
 				                           </select>
 				                        </div>
 				                        <div class="input-group input-group-lg addservice_input">
@@ -235,8 +244,8 @@
 				                        <div class="input-group input-group-lg addservice_input">
 				                          <span class="input-group-addon"  id="sizing-addon1">Payment Method</span>
 				                          <select disabled id="pmethodfield'.$sname.'" name="PaymentMethod" value="'.$pmethod.'" class="form-control" aria-describedby="sizing-addon1">
-				                              <option value="1g">Paypal</option>
-				                              <option value="2g">ContactUs</option>
+				                              <option value="1g"'; if($pmethod == "Paypal"){echo "selected";} echo'>Paypal</option>
+				                              <option value="2g"'; if($pmethod == "ContactUs"){echo "selected";} echo'>ContactUs</option>
 				                           </select>
 				                        </div>
 				                        <div class="btn-group-lg btngroup" align="center">
@@ -249,7 +258,6 @@
 							      </div>  
 							    </div>
 						    </div>' ;
-			                $i = $i + 1;
 			           //$this->servicesModal($i);				    
 			        }
 				} else {
@@ -268,19 +276,33 @@
 		function insert_services($gid,$title,$price,$category,$details,$method){
 			$conn = $this->connectdb($GLOBALS['host'],$GLOBALS['user'],$GLOBALS['pass'],$GLOBALS['database']);
 			if($method == "1g"){
-				$payment = "Pay via Paypal";
+				$payment = "Paypal";
 			}else if($method == "2g"){
 				$payment = "ContactUs";
 			}
 			//$sql =  "INSERT INTO services (serviceName,gid,price,category,details) VALUES ('$title','$gid','$price','$category','$details')";
-			$sql =  "INSERT INTO services (serviceName,price,category,gid,details,PaymentMethod) VALUES ('$title','$price','$category','$gid','$details','$payment')";
+			$sql =  "INSERT INTO services (serviceName,price,category,gid,details,PaymentMethod) 
+			         VALUES ('$title','$price','$category','$gid','$details','$payment')";
 			return $conn->query($sql);
 		}
 
 		//UPDAAAAAAAAAAAAAAAAATTTTTTTTTTTEEEEEE
 
-		function edit_services($sid,$title,$price,$category,$details,$method){
-			return true;
+		function edit_services($file,$sid,$title,$price,$category,$details,$method){
+			$conn = $this->connectdb($GLOBALS['host'],$GLOBALS['user'],$GLOBALS['pass'],$GLOBALS['database']);
+
+			if($method == "1g"){
+				$payment = "Paypal";
+			}else if($method == "2g"){
+				$payment = "ContactUs";
+			}
+
+			$sql =  "UPDATE services 
+					 SET serviceName='$title', price='$price', category='$category', details='$details', PaymentMethod = '$payment' 
+					 WHERE sid='$sid'";
+			return $conn->query($sql);
+
+			//echo $file." ".$sid." ".$title." ".$price." ".$category." ".$details." ".$method;
 		}
 
 

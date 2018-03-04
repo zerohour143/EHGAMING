@@ -1,3 +1,8 @@
+<?php
+    include_once '../../configs/config.php';
+    $ops = new functions;
+?>
+
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
   <head>
