@@ -1,5 +1,5 @@
 <?php
-    include_once '../../configs/config.php';
+    include_once 'configs/config.php';
     $ops = new functions;
 ?>
 

@@ -99,3 +99,10 @@
 	margin-top: 7%;
 }
 
+
+@media only screen and (min-width: 1900px) {
+   #logincont{
+		width: 17%;
+    	height: 33%;
+	}
+}

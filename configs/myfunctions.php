@@ -3,17 +3,10 @@
 		public $sname, $price, $category, $details, $pmethod;
 		
 
+//CONFIGURATIONSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+
 		function connectdb($host, $user, $pass, $database){
 			$connect = mysqli_connect($host,$user,$pass,$database) or die("cannot connect to db");
-			/*if (!$connect) {
-			    echo "Error: Unable to connect to MySQL." . PHP_EOL;
-			    echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
-			    echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
-			    exit;
-			}
-
-			echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
-			echo "Host information: " . mysqli_get_host_info($connect) . PHP_EOL;*/
 			return $connect;
 		}
 
@@ -231,7 +224,8 @@
 				                        <div class="input-group input-group-lg addservice_input">
 				                          <span class="input-group-addon"  id="sizing-addon1">Category</span>
 				                          <select disabled id="categoryfield'.$sname.'" name="category" value="'.$category.'" class="form-control" aria-describedby="sizing-addon1">
-				                              <option value="power leveling"'; if($category == "power leveling"){echo "selected";} echo'>Power Leveling</option>
+				                              <option value="power leveling"'; if($category == "(NORMAL)power leveling"){echo "selected";} echo'>(NORMAL)Power Leveling</option>
+				                               <option value="power leveling"'; if($category == "(SPECIAL)power leveling"){echo "selected";} echo'>(SPECIAL)Power Leveling</option>
 				                              <option value="farming"'; if($category == "farming"){echo "selected";} echo'>Farming</option>
 				                              <option value="contribution points"'; if($category == "contribution points"){echo "selected";} echo'>Contribution Points</option>
 				                              <option value="customize"'; if($category == "customize"){echo "selected";} echo'>Customize</option>

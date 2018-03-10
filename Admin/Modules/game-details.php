@@ -102,7 +102,8 @@
                         <div class="input-group input-group-lg addservice_input">
                           <span class="input-group-addon"  id="sizing-addon1">Category</span>
                           <select name="category" class="form-control" aria-describedby="sizing-addon1">
-                              <option value="power leveling">Power Leveling</option>
+                              <option value="(NORMAL)power leveling">(NORMAL)Power Leveling</option>
+                              <option value="(SPECIAL)power leveling">(SPECIAL)Power Leveling</option>
                               <option value="farming">Farming</option>
                               <option value="contribution points">Contribution Points</option>
                               <option value="customize">Customize</option>
