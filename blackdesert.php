@@ -1,6 +1,7 @@
 <?php
     include_once 'configs/config.php';
     $ops = new functions;
+    $gid = $_GET["gid"];
 ?>
 
 <!DOCTYPE html>
@@ -67,7 +68,7 @@
                   <div  class="mbox">  
                     <div id="modal-content">
                       <div id="content1">
-                        <span>Power Leveling Rates <STRONG>LIMITED TIME OFFER</STRONG> </br>( Free Awakening )</span>
+                        <span>Power Leveling Rates <STRONG>LIMITED TIME OFFER</STRONG> </br>( Free Awakening/Special Offers )</span>
                         <div id="level">
                           <a href="#content1" class="btn-success bttn">Special Package</a>
                           <a href="#table2" class="btn-info bttn">Normal Package</a>
@@ -84,70 +85,15 @@
                             </tr>
                           </thead>
                           <tbody>
-                            <tr>
-                              <td style="vertical-align: middle;">1 - 50</td>
-                              <td style="vertical-align: middle;">$15</td>
-                              <td style="vertical-align: middle;">12 hours</td>
-                              <td style="vertical-align: middle;"><img class="img-fluid" src="img/paypal.jpg" width="120px" height="40px"></td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: middle;">1 - 55</td>
-                              <td style="vertical-align: middle;">$39</td>
-                              <td style="vertical-align: middle;">32 hours</td>
-                              <td style="vertical-align: middle;"><img class="img-fluid" src="img/paypal.jpg" width="120px" height="40px"></td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: middle;">1 - 56</td>
-                              <td style="vertical-align: middle;">$45</td>
-                              <td style="vertical-align: middle;">( Less than 2 days ) + BONUS ( free awakening )</td>
-                              <td style="vertical-align: middle;"><img class="img-fluid" src="img/paypal.jpg" width="120px" height="40px"></td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: middle;">1 - 57</td>
-                              <td style="vertical-align: middle;">$100</td>
-                              <td style="vertical-align: middle;">( 3 - 7 days ) + BONUS ( free awakening )</td>
-                              <td style="vertical-align: middle;"><img class="img-fluid" src="img/paypal.jpg" width="120px" height="40px"></td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: middle;">56 - 57</td>
-                              <td style="vertical-align: middle;">$70</td>
-                              <td style="vertical-align: middle;">3 - 4 days</td>
-                              <td style="vertical-align: middle;"><img class="img-fluid" src="img/paypal.jpg" width="120px" height="40px"></td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: middle;">57 - 58</td>
-                              <td style="vertical-align: middle;">$140</td>
-                              <td style="vertical-align: middle;">6 - 7 days</td>
-                              <td style="vertical-align: middle;"><img class="img-fluid" src="img/paypal.jpg" width="120px" height="40px"></td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: middle;">58 - 59</td>
-                              <td style="vertical-align: middle;">$250</td>
-                              <td style="vertical-align: middle;">10 - 12 days</td>
-                              <td style="vertical-align: middle;"><img class="img-fluid" src="img/paypal.jpg" width="120px" height="40px"></td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: middle;">59 - 60</td>
-                              <td style="vertical-align: middle;">$600</td>
-                              <td style="vertical-align: middle;">23 - 25 days</td>
-                              <td style="vertical-align: middle;"><img class="img-fluid" src="img/paypal.jpg" width="120px" height="40px"></td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: middle;">60 - 61</td>
-                              <td style="vertical-align: middle;">Hit us up with a message</td>
-                              <td style="vertical-align: middle;">Hit us up with a message</td>
-                              <td style="vertical-align: middle;">
-                              <a href="skype:bobyan1?chat"><div>
-                                <img src="img/skype.jpg" width="65%" height="40%" class="img-fluid">
-                              </div></a>
-                              </td>
-                            </tr>  
+                           <?php
+                            $ops->specialPowerLvlLive($gid);
+                          ?>  
                           </tbody>
                         </table>
                       </div>
 
                       <div id="table2">
-                        <div id="word2"><span>If your level is between <strong>15 and 56: </strong></br>( Free Awakening )</span></div>
+                        <div id="word2"><span>If your level is between <strong>15 and 56: </strong></br>( Free Awakening/Normal Offers )</span></div>
                         <div id="level2">
                           <a href="#content1" class="btn-success bttn">Special Package</a>
                           <a href="#table2" class="btn-info bttn">Normal Package</a>
@@ -162,66 +108,7 @@
                             </tr>
                           </thead>
                           <tbody>
-                            <tr>
-                              <td style="vertical-align: middle;">1  - 15</td>
-                              <td style="vertical-align: middle;">56 + Bonus</td>
-                              <td style="vertical-align: middle;">$45</td>
-                              <td style="vertical-align: middle;"><img class="img-fluid" src="img/paypal.jpg" width="120px" height="40px"></td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: middle;">15 - 29</td>
-                              <td style="vertical-align: middle;">56 + Bonus</td>
-                              <td style="vertical-align: middle;">$39</td>
-                              <td style="vertical-align: middle;"><img class="img-fluid" src="img/paypal.jpg" width="120px" height="40px"></td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: middle;">30 - 39</td>
-                              <td style="vertical-align: middle;">56 + Bonus</td>
-                              <td style="vertical-align: middle;">$36</td>
-                              <td style="vertical-align: middle;"><img class="img-fluid" src="img/paypal.jpg" width="120px" height="40px"></td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: middle;">40 - 49</td>
-                              <td style="vertical-align: middle;">56 + Bonus</td>
-                              <td style="vertical-align: middle;">$33</td>
-                              <td style="vertical-align: middle;"><img class="img-fluid" src="img/paypal.jpg" width="120px" height="40px"></td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: middle;">50</td>
-                              <td style="vertical-align: middle;">56 + Bonus</td>
-                              <td style="vertical-align: middle;">$29</td>
-                              <td style="vertical-align: middle;"><img class="img-fluid" src="img/paypal.jpg" width="120px" height="40px"></td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: middle;">51</td>
-                              <td style="vertical-align: middle;">56 + Bonus</td>
-                              <td style="vertical-align: middle;">$27</td>
-                              <td style="vertical-align: middle;"><img class="img-fluid" src="img/paypal.jpg" width="120px" height="40px"></td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: middle;">52</td>
-                              <td style="vertical-align: middle;">56 + Bonus</td>
-                              <td style="vertical-align: middle;">$26</td>
-                              <td style="vertical-align: middle;"><img class="img-fluid" src="img/paypal.jpg" width="120px" height="40px"></td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: middle;">53</td>
-                              <td style="vertical-align: middle;">56 + Bonus</td>
-                              <td style="vertical-align: middle;">$24</td>
-                              <td style="vertical-align: middle;"><img class="img-fluid" src="img/paypal.jpg" width="120px" height="40px"></td>
-                            </tr>  
-                             <tr>
-                              <td style="vertical-align: middle;">54</td>
-                              <td style="vertical-align: middle;">56 + Bonus</td>
-                              <td style="vertical-align: middle;">$22</td>
-                              <td style="vertical-align: middle;"><img class="img-fluid" src="img/paypal.jpg" width="120px" height="40px"></td>
-                            </tr> 
-                             <tr>
-                              <td style="vertical-align: middle;">55</td>
-                              <td style="vertical-align: middle;">56 + Bonus</td>
-                              <td style="vertical-align: middle;">$20</td>
-                              <td style="vertical-align: middle;"><img class="img-fluid" src="img/paypal.jpg" width="120px" height="40px"></td>
-                            </tr>                                    
+                            <?php $ops->normalPowerLvlLive($gid); ?>                            
                           </tbody>
                         </table>
                       </div>

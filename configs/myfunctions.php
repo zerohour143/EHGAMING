@@ -260,6 +260,73 @@
 		}
 
 
+		function specialPowerLvlLive($gid){
+			$conn = $this->connectdb($GLOBALS['host'],$GLOBALS['user'],$GLOBALS['pass'],$GLOBALS['database']);
+				$sql =  "SELECT serviceName, sid, price, category, details, PaymentMethod 
+				         FROM services
+				         WHERE gid = '$gid' AND category='(SPECIAL)power leveling'";
+				$result = $conn->query($sql);
+
+
+				if ($result->num_rows > 0) {
+					 $i=0;
+				    while($row = $result->fetch_assoc()) {
+
+			                $sid = $row['sid'];
+			                $sname = $row['serviceName'];
+			                $price = $row['price'];
+			                $category = $row['category'];
+			                $details = $row['details'];
+			                $pmethod = $row['PaymentMethod'];
+
+			                echo '  <tr>
+		                              <td style="vertical-align: middle;">'.$sname.'</td>
+		                              <td style="vertical-align: middle;">'.$price.'</td>
+		                              <td style="vertical-align: middle;">'.$details.'</td>
+		                              <td style="vertical-align: middle;"><img class="img-fluid" src="';if($pmethod == "Paypal"){echo 'img/paypal.jpg"';}else if($pmethod == 'ContactUs'){echo 'img/skype.jpg"';} echo' width="120px" height="40px"></td>
+		                            </tr>';
+			         }
+			    }else{
+			    	echo "No Result";
+			    }
+ 
+		}
+
+
+
+		function normalPowerLvlLive($gid){
+			$conn = $this->connectdb($GLOBALS['host'],$GLOBALS['user'],$GLOBALS['pass'],$GLOBALS['database']);
+				$sql =  "SELECT serviceName, sid, price, category, details, PaymentMethod 
+				         FROM services
+				         WHERE gid = '$gid' AND category='(NORMAL)power leveling'";
+				$result = $conn->query($sql);
+
+
+				if ($result->num_rows > 0) {
+					 $i=0;
+				    while($row = $result->fetch_assoc()) {
+
+			                $sid = $row['sid'];
+			                $sname = $row['serviceName'];
+			                $price = $row['price'];
+			                $category = $row['category'];
+			                $details = $row['details'];
+			                $pmethod = $row['PaymentMethod'];
+
+			                echo '   <tr>
+		                              <td style="vertical-align: middle;">'.$sname.'</td>
+		                              <td style="vertical-align: middle;">'.$details.'</td>
+		                              <td style="vertical-align: middle;">'.$price.'</td>
+		                               <td style="vertical-align: middle;"><img class="img-fluid" src="';if($pmethod == "Paypal"){echo 'img/paypal.jpg"';}else if($pmethod == 'ContactUs'){echo 'img/skype.jpg"';} echo' width="120px" height="40px"></td>
+		                            </tr>';
+			         }
+			    }else{
+			    	echo "No Result";
+			    }
+ 
+		}
+
+
 		//INSEEEEEEEEEEEEEERRRRRRRRRRRRRRRRRTTTTTTTTTTTTTTT
 		function insert_game($title,$details,$path){
 			$conn = $this->connectdb($GLOBALS['host'],$GLOBALS['user'],$GLOBALS['pass'],$GLOBALS['database']);
