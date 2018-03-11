@@ -147,24 +147,7 @@
                                 </tr>
                               </thead>
                               <tbody>
-                                <tr>
-                                  <td style="vertical-align: middle;">200 million</td>
-                                  <td style="vertical-align: middle;">3 - 4 days</td>
-                                  <td style="vertical-align: middle;" class="text-warning">$116</td>
-                                  <td style="vertical-align: middle;" class="text-warning"><img class="img-fluid" src="img/paypal.jpg" width="120px" height="40px"></td>
-                                </tr>
-                                <tr>
-                                  <td style="vertical-align: middle;">500 million </td>
-                                  <td style="vertical-align: middle;">5 - 8 days</td>
-                                  <td style="vertical-align: middle;" class="text-warning">$280</td>
-                                  <td style="vertical-align: middle;" class="text-warning"><img class="img-fluid" src="img/paypal.jpg" width="120px" height="40px"></td>
-                                </tr>
-                                 <tr>
-                                  <td>1 billion</td>
-                                  <td>10 - 14 days</td>
-                                  <td style="vertical-align: middle;" class="text-warning">$500</td>
-                                  <td style="vertical-align: middle;" class="text-warning"><img class="img-fluid" src="img/paypal.jpg" width="120px" height="40px"></td>
-                                </tr>
+                                <?php $ops->silverLive($gid); ?>  
                               </tbody>                 
                             </table>
                       </div>
@@ -198,21 +181,7 @@
                             <th>Price</th> 
                             <th>Payment</th>
                           </tr>
-                          <tr>
-                            <td style="vertical-align: middle;">1-100pts.</td>
-                            <td style="vertical-align: middle;">$0.8 / point </td> 
-                            <td style="vertical-align: middle;"><img class="img-fluid" src="img/paypal.jpg" width="120px" height="40px"></td>
-                          </tr>
-                          <tr>
-                            <td style="vertical-align: middle;">100-200</td>
-                            <td style="vertical-align: middle;">$1 / points</td> 
-                            <td style="vertical-align: middle;"><img class="img-fluid" src="img/paypal.jpg" width="120px" height="40px"></td>
-                          </tr>
-                          <tr>
-                            <td style="vertical-align: middle;">200-250 </td>
-                            <td style="vertical-align: middle;">$1.5 / point</td> 
-                            <td style="vertical-align: middle;"><img class="img-fluid" src="img/paypal.jpg" width="120px" height="40px"></td>
-                          </tr>
+                          <?php $ops->cntrbtnPtsLive($gid); ?>
                       </table>
                     </div>   
                   </div>

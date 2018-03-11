@@ -166,7 +166,8 @@
 			$conn = $this->connectdb($GLOBALS['host'],$GLOBALS['user'],$GLOBALS['pass'],$GLOBALS['database']);
 				$sql =  "SELECT serviceName, sid, price, category, details, PaymentMethod 
 				         FROM services
-				         WHERE gid = '$gid'";
+				         WHERE gid = '$gid'
+				         ORDER BY category";
 				$result = $conn->query($sql);
 
 				if ($result->num_rows > 0) {
@@ -260,6 +261,9 @@
 		}
 
 
+////////////LIVE SITE DISPLAYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
+
+
 		function specialPowerLvlLive($gid){
 			$conn = $this->connectdb($GLOBALS['host'],$GLOBALS['user'],$GLOBALS['pass'],$GLOBALS['database']);
 				$sql =  "SELECT serviceName, sid, price, category, details, PaymentMethod 
@@ -325,6 +329,72 @@
 			    }
  
 		}
+
+
+		function silverLive($gid){
+			$conn = $this->connectdb($GLOBALS['host'],$GLOBALS['user'],$GLOBALS['pass'],$GLOBALS['database']);
+				$sql =  "SELECT serviceName, sid, price, category, details, PaymentMethod 
+				         FROM services
+				         WHERE gid = '$gid' AND category='farming'";
+				$result = $conn->query($sql);
+
+
+				if ($result->num_rows > 0) {
+					 $i=0;
+				    while($row = $result->fetch_assoc()) {
+
+			                $sid = $row['sid'];
+			                $sname = $row['serviceName'];
+			                $price = $row['price'];
+			                $category = $row['category'];
+			                $details = $row['details'];
+			                $pmethod = $row['PaymentMethod'];
+
+			                echo '   <tr>
+		                              <td style="vertical-align: middle;">'.$sname.'</td>
+		                              <td style="vertical-align: middle;">'.$details.'</td>
+		                              <td style="vertical-align: middle;">'.$price.'</td>
+		                               <td style="vertical-align: middle;"><img class="img-fluid" src="';if($pmethod == "Paypal"){echo 'img/paypal.jpg"';}else if($pmethod == 'ContactUs'){echo 'img/skype.jpg"';} echo' width="120px" height="40px"></td>
+		                            </tr>';
+			         }
+			    }else{
+			    	echo "No Result";
+			    }
+ 
+		}
+
+
+		function cntrbtnPtsLive($gid){
+			$conn = $this->connectdb($GLOBALS['host'],$GLOBALS['user'],$GLOBALS['pass'],$GLOBALS['database']);
+				$sql =  "SELECT serviceName, sid, price, category, details, PaymentMethod 
+				         FROM services
+				         WHERE gid = '$gid' AND category='contribution points'";
+				$result = $conn->query($sql);
+
+
+				if ($result->num_rows > 0) {
+					 $i=0;
+				    while($row = $result->fetch_assoc()) {
+
+			                $sid = $row['sid'];
+			                $sname = $row['serviceName'];
+			                $price = $row['price'];
+			                $category = $row['category'];
+			                $details = $row['details'];
+			                $pmethod = $row['PaymentMethod'];
+
+			                echo '   <tr>
+			                              <td style="vertical-align: middle;">'.$sname.'</td>
+			                              <td style="vertical-align: middle;">'.$price.'</td>
+			                               <td style="vertical-align: middle;"><img class="img-fluid" src="';if($pmethod == "Paypal"){echo 'img/paypal.jpg"';}else if($pmethod == 'ContactUs'){echo 'img/skype.jpg"';} echo' width="120px" height="40px"></td>
+		                            </tr>';
+			         }
+			    }else{
+			    	echo "No Result";
+			    }
+ 
+		}
+
 
 
 		//INSEEEEEEEEEEEEEERRRRRRRRRRRRRRRRRTTTTTTTTTTTTTTT
